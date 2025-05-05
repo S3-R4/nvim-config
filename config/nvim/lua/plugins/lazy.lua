@@ -25,5 +25,12 @@ require("lazy").setup({
             lspconfig.pyright.setup({})
         end,
     },
+
+    --- nvim-telescope
+    {   
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
+    ---;;;END OF nvim-telescope
 })
 ---;;;END OF Lazy Setup
