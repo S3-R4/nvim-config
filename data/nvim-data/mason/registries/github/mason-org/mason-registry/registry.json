@@ -2549,7 +2549,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40github/copilot-language-server@1.312.0"
+      "id": "pkg:npm/%40github/copilot-language-server@1.313.0"
     },
     "bin": {
       "copilot-language-server": "npm:copilot-language-server"
@@ -6211,7 +6211,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:generic/haskell/haskell-language-server@2.9.0.1",
+      "id": "pkg:generic/haskell/haskell-language-server@2.10.0.0",
       "build": [
         {
           "target": "unix",
@@ -6222,11 +6222,11 @@
           },
           "bin": {
             "wrapper": "bin/haskell-language-server-wrapper",
-            "server_9_2_8": "bin/haskell-language-server-9.2.8",
             "server_9_4_8": "bin/haskell-language-server-9.4.8",
-            "server_9_6_6": "bin/haskell-language-server-9.6.6",
-            "server_9_8_2": "bin/haskell-language-server-9.8.2",
-            "server_9_10_1": "bin/haskell-language-server-9.10.1"
+            "server_9_6_7": "bin/haskell-language-server-9.6.7",
+            "server_9_8_4": "bin/haskell-language-server-9.8.4",
+            "server_9_10_1": "bin/haskell-language-server-9.10.1",
+            "server_9_12_2": "bin/haskell-language-server-9.12.2"
           }
         },
         {
@@ -6238,22 +6238,22 @@
           },
           "bin": {
             "wrapper": "haskell-language-server-wrapper.exe",
-            "server_9_2_8": "haskell-language-server-9.2.8.exe",
             "server_9_4_8": "haskell-language-server-9.4.8.exe",
-            "server_9_6_6": "haskell-language-server-9.6.6.exe",
-            "server_9_8_2": "haskell-language-server-9.8.2.exe",
-            "server_9_10_1": "haskell-language-server-9.10.1.exe"
+            "server_9_6_7": "haskell-language-server-9.6.7.exe",
+            "server_9_8_4": "haskell-language-server-9.8.4.exe",
+            "server_9_10_1": "haskell-language-server-9.10.1.exe",
+            "server_9_12_2": "haskell-language-server-9.12.2.exe"
           }
         }
       ]
     },
     "bin": {
       "haskell-language-server-wrapper": "{{source.build.bin.wrapper}}",
-      "haskell-language-server-9.2.8": "{{source.build.bin.server_9_2_8}}",
       "haskell-language-server-9.4.8": "{{source.build.bin.server_9_4_8}}",
-      "haskell-language-server-9.6.6": "{{source.build.bin.server_9_6_6}}",
-      "haskell-language-server-9.8.2": "{{source.build.bin.server_9_8_2}}",
-      "haskell-language-server-9.10.1": "{{source.build.bin.server_9_10_1}}"
+      "haskell-language-server-9.6.7": "{{source.build.bin.server_9_6_7}}",
+      "haskell-language-server-9.8.4": "{{source.build.bin.server_9_8_4}}",
+      "haskell-language-server-9.10.1": "{{source.build.bin.server_9_10_1}}",
+      "haskell-language-server-9.12.2": "{{source.build.bin.server_9_12_2}}"
     }
   },
   {
