@@ -1,13 +1,4 @@
 !_TAG_FILE_ENCODING	utf-8	//
-andromeda-andromeda-theme-for-neovim	andromeda.md	/# Andromeda Theme for Neovim
-andromeda-customization	andromeda.md	/## Customization
-andromeda-customizing-accent-color-s	andromeda.md	/### Customizing accent color(s)
-andromeda-customizing-background-s	andromeda.md	/### Customizing background(s)
-andromeda-customizing-font-style-s	andromeda.md	/### Customizing font style(s)
-andromeda-installation	andromeda.md	/## Installation
-andromeda-supported-plugins-as-of-right-now	andromeda.md	/## Supported plugins (as of right now)
-andromeda-table-of-content	andromeda.md	/## Table of Content
-andromeda-thank-you	andromeda.md	/## Thank You
 colorbuddy.nvim-basic-usage	colorbuddy.nvim.md	/# Basic Usage
 colorbuddy.nvim-colorbuddy-nvim	colorbuddy.nvim.md	/# colorbuddy.nvim
 colorbuddy.nvim-example	colorbuddy.nvim.md	/## Example
@@ -41,6 +32,15 @@ harpoon-the-solutions	harpoon.md	/## ⇁  The Solutions:
 harpoon-tmux-support	harpoon.md	/### Tmux Support
 harpoon-use-a-dynamic-width-for-the-harpoon-popup-menu	harpoon.md	/#### Use a dynamic width for the Harpoon popup menu
 harpoon-wip	harpoon.md	/## ⇁  WIP
+nvim-andromeda-andromeda-theme-for-neovim	nvim-andromeda.md	/# Andromeda Theme for Neovim
+nvim-andromeda-customization	nvim-andromeda.md	/## Customization
+nvim-andromeda-customizing-accent-color-s	nvim-andromeda.md	/### Customizing accent color(s)
+nvim-andromeda-customizing-background-s	nvim-andromeda.md	/### Customizing background(s)
+nvim-andromeda-customizing-font-style-s	nvim-andromeda.md	/### Customizing font style(s)
+nvim-andromeda-installation	nvim-andromeda.md	/## Installation
+nvim-andromeda-supported-plugins-as-of-right-now	nvim-andromeda.md	/## Supported plugins (as of right now)
+nvim-andromeda-table-of-content	nvim-andromeda.md	/## Table of Content
+nvim-andromeda-thank-you	nvim-andromeda.md	/## Thank You
 nvim-web-devicons-additional-icons	nvim-web-devicons.md	/## Additional Icons
 nvim-web-devicons-case-sensitivity	nvim-web-devicons.md	/### Case Sensitivity
 nvim-web-devicons-contributing	nvim-web-devicons.md	/## Contributing

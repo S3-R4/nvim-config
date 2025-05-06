@@ -1311,7 +1311,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:npm/brighterscript-formatter@1.7.12"
+      "id": "pkg:npm/brighterscript-formatter@1.7.13"
     },
     "bin": {
       "bsfmt": "npm:bsfmt"
@@ -1402,7 +1402,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:npm/%40rokucommunity/bslint@0.8.29"
+      "id": "pkg:npm/%40rokucommunity/bslint@0.8.30"
     },
     "bin": {
       "bslint": "npm:bslint"

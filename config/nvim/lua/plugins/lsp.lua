@@ -3,7 +3,7 @@ require("mason").setup()
 
 -- Setup Mason LSPConfig to install servers
 require("mason-lspconfig").setup({
-    ensure_installed = { "pyright", "tsserver", "lua_ls", "rust_analyzer", "gopls"}, -- updated to typescript-language-server
+    ensure_installed = { "pyright", "ts_ls", "lua_ls", "rust_analyzer", "gopls"}, -- updated to typescript-language-server
     automatic_installation = false,  -- automatically install the LSP servers
 })
 
@@ -13,10 +13,10 @@ local lspconfig = require("lspconfig")
 -- Example: Pyright (Python)
 lspconfig.pyright.setup({})
 
--- Example: typescript-language-server (TypeScript/JavaScript)
-lspconfig.tsserver.setup({
-    -- you can configure this LSP more specifically here if needed
-})
+-- -- -- -- Example: typescript-language-server (TypeScript/JavaScript)
+-- -- -- lspconfig.tsserver.setup({
+-- -- --     -- you can configure this LSP more specifically here if needed
+-- -- -- })
 
 -- Example: Lua (using lua_ls)
 lspconfig.lua_ls.setup({

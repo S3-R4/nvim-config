@@ -1,11 +1,3 @@
--- ---setting up the andromeda colorscheme
--- vim.g.andromeda_transparent = true
--- vim.g.andromeda_bold = true
--- vim.g.andromeda_italic = true
--- vim.g.andromeda_set_terminal_colors = true
--- vim.cmd("colorscheme andromeda")
--- ---;;;END OF colorscheme
-
 --- Configuring the dashboard-nvim
 local M = {}
 
@@ -14,6 +6,68 @@ local function set_dashboard_colors()
     -- Convert RGB values to hex: R(116) G(37) B(45) -> #742D2D
     vim.api.nvim_command('highlight DashboardHeader guifg=#742D2D ctermfg=131')
 end
+
+-- Set Andromeda-specific settings before loading the colorscheme
+vim.g.andromeda_enable_italic = true
+vim.g.andromeda_disable_italic_comment = false
+vim.g.andromeda_cursor = "auto"
+vim.g.andromeda_transparent = true
+
+-- Load colorscheme
+vim.cmd("colorscheme andromeda")
+
+vim.opt.fillchars:append { vert = ' ', horiz = ' ', eob = ' ' }
+
+
+-- -- Remove window separators
+-- vim.opt.fillchars:append {
+--     vert = ' ',
+--     horiz = ' ',
+--     eob = ' ',
+--     fold = ' ',
+--     diff = ' ',
+-- }
+  
+
+-- Lualine setup
+require("lualine").setup({
+    options = {
+        icons_enabled = false,
+        theme = "gruvbox",
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
+    },
+    sections = {
+        lualine_a = {
+            {
+                'mode',
+                fmt = function(str)
+                  return str .. " 🪟"
+                end
+            }
+        },
+        lualine_b = {'filename', 'diagnostics'},
+        lualine_c = {"  os.date('%I:%M %p')"},
+        lualine_x = {'filetype'},
+        lualine_y = {   
+            {
+                'lsp_status',
+                icon = '', -- f013
+                symbols = {
+                -- Standard unicode symbols to cycle through for LSP progress:
+                spinner = { '⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏' },
+                -- Standard unicode symbol for when LSP is done:
+                done = '✓',
+                -- Delimiter inserted between LSP names:
+                separator = ' ',
+                },
+                -- List of LSP names to ignore (e.g., `null-ls`):
+                ignore_lsp = {},
+          }
+        },
+        lualine_z = {'location'}
+      },
+})
 
 function M.setup_dashboard()
     -- Set up color highlights
@@ -88,8 +142,13 @@ function M.setup_dashboard()
                     action = 'qa' 
                 },
             },
-            footer = { '~ made by S3R4' } -- later here will be an ascii art
-        }
+            footer = { '~ made by S3R4' }, -- later here will be an ascii art
+            win_config = {
+                border = 'none', -- ← This removes the border
+            },
+        },
+          
+        
     })
 end
 
