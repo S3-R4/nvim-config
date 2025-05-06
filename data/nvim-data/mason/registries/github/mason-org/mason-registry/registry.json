@@ -422,6 +422,9 @@
     },
     "bin": {
       "ngserver": "npm:ngserver"
+    },
+    "neovim": {
+      "lspconfig": "angularls"
     }
   },
   {
@@ -442,6 +445,9 @@
     },
     "bin": {
       "ansible-language-server": "npm:ansible-language-server"
+    },
+    "neovim": {
+      "lspconfig": "ansiblels"
     }
   },
   {
@@ -486,6 +492,9 @@
     },
     "bin": {
       "antlersls": "npm:antlersls"
+    },
+    "neovim": {
+      "lspconfig": "antlersls"
     }
   },
   {
@@ -587,6 +596,9 @@
     },
     "bin": {
       "arduino-language-server": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "arduino_language_server"
     }
   },
   {
@@ -610,6 +622,9 @@
     },
     "bin": {
       "asm-lsp": "cargo:asm-lsp"
+    },
+    "neovim": {
+      "lspconfig": "asm_lsp"
     }
   },
   {
@@ -700,6 +715,9 @@
     "bin": {
       "ast-grep": "npm:ast-grep",
       "sg": "npm:sg"
+    },
+    "neovim": {
+      "lspconfig": "ast_grep"
     }
   },
   {
@@ -727,6 +745,9 @@
     },
     "bin": {
       "astro-ls": "npm:astro-ls"
+    },
+    "neovim": {
+      "lspconfig": "astro"
     }
   },
   {
@@ -785,6 +806,9 @@
     },
     "bin": {
       "autotools-language-server": "pypi:autotools-language-server"
+    },
+    "neovim": {
+      "lspconfig": "autotools_ls"
     }
   },
   {
@@ -808,6 +832,9 @@
     },
     "bin": {
       "awk-language-server": "npm:awk-language-server"
+    },
+    "neovim": {
+      "lspconfig": "awk_ls"
     }
   },
   {
@@ -828,6 +855,9 @@
     },
     "bin": {
       "azure-pipelines-language-server": "node:node_modules/azure-pipelines-language-server/out/server.js"
+    },
+    "neovim": {
+      "lspconfig": "azure_pipelines_ls"
     }
   },
   {
@@ -912,6 +942,9 @@
     "bin": {
       "basedpyright": "pypi:basedpyright",
       "basedpyright-langserver": "pypi:basedpyright-langserver"
+    },
+    "neovim": {
+      "lspconfig": "basedpyright"
     }
   },
   {
@@ -965,6 +998,9 @@
     },
     "bin": {
       "bash-language-server": "npm:bash-language-server"
+    },
+    "neovim": {
+      "lspconfig": "bashls"
     }
   },
   {
@@ -1043,6 +1079,9 @@
     },
     "bin": {
       "beancount-language-server": "cargo:beancount-language-server"
+    },
+    "neovim": {
+      "lspconfig": "beancount"
     }
   },
   {
@@ -1130,6 +1169,9 @@
     },
     "bin": {
       "bicep-lsp": "dotnet:extension/bicepLanguageServer/Bicep.LangServer.dll"
+    },
+    "neovim": {
+      "lspconfig": "bicep"
     }
   },
   {
@@ -1157,6 +1199,9 @@
     },
     "bin": {
       "biome": "npm:biome"
+    },
+    "neovim": {
+      "lspconfig": "biome"
     }
   },
   {
@@ -1287,10 +1332,13 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/brighterscript@0.69.7"
+      "id": "pkg:npm/brighterscript@0.69.8"
     },
     "bin": {
       "bsc": "npm:bsc"
+    },
+    "neovim": {
+      "lspconfig": "bright_script"
     }
   },
   {
@@ -1335,6 +1383,9 @@
     },
     "bin": {
       "bsl-language-server": "java-jar:{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "bsl_ls"
     }
   },
   {
@@ -1428,6 +1479,9 @@
     },
     "bin": {
       "buf": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "buf_ls"
     }
   },
   {
@@ -1522,6 +1576,9 @@
     },
     "bin": {
       "bzl": "{{source.download.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "bzl"
     }
   },
   {
@@ -1579,6 +1636,9 @@
     },
     "bin": {
       "cairo-language-server": "cargo:cairo-language-server"
+    },
+    "neovim": {
+      "lspconfig": "cairo_ls"
     }
   },
   {
@@ -1915,6 +1975,9 @@
     },
     "bin": {
       "clangd": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "clangd"
     }
   },
   {
@@ -1998,7 +2061,10 @@
     "bin": {
       "clarity-lsp": "{{source.asset.bin}}"
     },
-    "ci_skip": true
+    "ci_skip": true,
+    "neovim": {
+      "lspconfig": "clarity_lsp"
+    }
   },
   {
     "name": "clj-kondo",
@@ -2152,6 +2218,9 @@
     },
     "bin": {
       "clojure-lsp": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "clojure_lsp"
     }
   },
   {
@@ -2172,6 +2241,9 @@
     },
     "bin": {
       "cmake-language-server": "pypi:cmake-language-server"
+    },
+    "neovim": {
+      "lspconfig": "cmake"
     }
   },
   {
@@ -2271,6 +2343,9 @@
     },
     "bin": {
       "cobol-language-support": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "cobol_ls"
     }
   },
   {
@@ -2407,6 +2482,9 @@
     },
     "bin": {
       "codeql": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "codeqlls"
     }
   },
   {
@@ -2549,7 +2627,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40github/copilot-language-server@1.313.0"
+      "id": "pkg:npm/%40github/copilot-language-server@1.314.0"
     },
     "bin": {
       "copilot-language-server": "npm:copilot-language-server"
@@ -2573,6 +2651,9 @@
     },
     "bin": {
       "coq-lsp": "opam:coq-lsp"
+    },
+    "neovim": {
+      "lspconfig": "coq_lsp"
     }
   },
   {
@@ -2815,6 +2896,9 @@
     },
     "bin": {
       "crystalline": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "crystalline"
     }
   },
   {
@@ -2835,6 +2919,9 @@
     },
     "bin": {
       "csharp-ls": "nuget:csharp-ls"
+    },
+    "neovim": {
+      "lspconfig": "csharp_ls"
     }
   },
   {
@@ -2898,6 +2985,9 @@
     },
     "bin": {
       "vscode-css-language-server": "npm:vscode-css-language-server"
+    },
+    "neovim": {
+      "lspconfig": "cssls"
     }
   },
   {
@@ -2920,6 +3010,9 @@
     },
     "bin": {
       "css-variables-language-server": "npm:css-variables-language-server"
+    },
+    "neovim": {
+      "lspconfig": "css_variables"
     }
   },
   {
@@ -2940,6 +3033,9 @@
     },
     "bin": {
       "cssmodules-language-server": "npm:cssmodules-language-server"
+    },
+    "neovim": {
+      "lspconfig": "cssmodules_ls"
     }
   },
   {
@@ -2960,6 +3056,9 @@
     },
     "bin": {
       "cucumber-language-server": "npm:cucumber-language-server"
+    },
+    "neovim": {
+      "lspconfig": "cucumber_language_server"
     }
   },
   {
@@ -3000,6 +3099,9 @@
     },
     "bin": {
       "cuelsp": "golang:cuelsp"
+    },
+    "neovim": {
+      "lspconfig": "dagger"
     }
   },
   {
@@ -3069,6 +3171,9 @@
     },
     "bin": {
       "custom-elements-languageserver": "npm:custom-elements-languageserver"
+    },
+    "neovim": {
+      "lspconfig": "custom_elements_ls"
     }
   },
   {
@@ -3089,6 +3194,9 @@
     },
     "bin": {
       "cypher-language-server": "npm:cypher-language-server"
+    },
+    "neovim": {
+      "lspconfig": "cypher_ls"
     }
   },
   {
@@ -3269,6 +3377,9 @@
     },
     "bin": {
       "deno": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "denols"
     }
   },
   {
@@ -3341,6 +3452,9 @@
     },
     "bin": {
       "dhall-lsp-server": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "dhall_lsp_server"
     }
   },
   {
@@ -3359,6 +3473,9 @@
     },
     "bin": {
       "diagnostic-languageserver": "npm:diagnostic-languageserver"
+    },
+    "neovim": {
+      "lspconfig": "diagnosticls"
     }
   },
   {
@@ -3472,6 +3589,9 @@
     },
     "bin": {
       "docker-compose-langserver": "npm:docker-compose-langserver"
+    },
+    "neovim": {
+      "lspconfig": "docker_compose_language_service"
     }
   },
   {
@@ -3492,6 +3612,9 @@
     },
     "bin": {
       "docker-langserver": "npm:docker-langserver"
+    },
+    "neovim": {
+      "lspconfig": "dockerls"
     }
   },
   {
@@ -3532,6 +3655,9 @@
     },
     "bin": {
       "dot-language-server": "npm:dot-language-server"
+    },
+    "neovim": {
+      "lspconfig": "dotls"
     }
   },
   {
@@ -3645,6 +3771,9 @@
     },
     "bin": {
       "dprint": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "dprint"
     }
   },
   {
@@ -3737,6 +3866,9 @@
     },
     "bin": {
       "earthlyls": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "earthlyls"
     }
   },
   {
@@ -3937,6 +4069,9 @@
     },
     "bin": {
       "efm-langserver": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "efm"
     }
   },
   {
@@ -4026,6 +4161,9 @@
     "bin": {
       "elixir-ls": "{{source.asset.bin.lsp}}",
       "elixir-ls-debugger": "{{source.asset.bin.dap}}"
+    },
+    "neovim": {
+      "lspconfig": "elixirls"
     }
   },
   {
@@ -4069,6 +4207,9 @@
     },
     "bin": {
       "elm-language-server": "npm:elm-language-server"
+    },
+    "neovim": {
+      "lspconfig": "elmls"
     }
   },
   {
@@ -4115,6 +4256,9 @@
     },
     "bin": {
       "elp": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "elp"
     }
   },
   {
@@ -4135,6 +4279,9 @@
     },
     "bin": {
       "ember-language-server": "npm:ember-language-server"
+    },
+    "neovim": {
+      "lspconfig": "ember"
     }
   },
   {
@@ -4155,6 +4302,9 @@
     },
     "bin": {
       "emmet-language-server": "npm:emmet-language-server"
+    },
+    "neovim": {
+      "lspconfig": "emmet_language_server"
     }
   },
   {
@@ -4175,6 +4325,9 @@
     },
     "bin": {
       "emmet-ls": "npm:emmet-ls"
+    },
+    "neovim": {
+      "lspconfig": "emmet_ls"
     }
   },
   {
@@ -4327,6 +4480,9 @@
     },
     "bin": {
       "els": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "erg_language_server"
     }
   },
   {
@@ -4435,6 +4591,9 @@
     },
     "bin": {
       "erlang_ls": "{{source.build.erlang_ls}}"
+    },
+    "neovim": {
+      "lspconfig": "erlangls"
     }
   },
   {
@@ -4455,6 +4614,9 @@
     },
     "bin": {
       "esbonio": "pypi:esbonio"
+    },
+    "neovim": {
+      "lspconfig": "esbonio"
     }
   },
   {
@@ -4479,6 +4641,9 @@
     },
     "bin": {
       "vscode-eslint-language-server": "npm:vscode-eslint-language-server"
+    },
+    "neovim": {
+      "lspconfig": "eslint"
     }
   },
   {
@@ -4564,6 +4729,9 @@
     },
     "bin": {
       "facility-language-server": "dotnet:libexec/Facility.LanguageServer.dll"
+    },
+    "neovim": {
+      "lspconfig": "facility_language_server"
     }
   },
   {
@@ -4604,6 +4772,9 @@
     },
     "bin": {
       "fennel-language-server": "cargo:fennel-language-server"
+    },
+    "neovim": {
+      "lspconfig": "fennel_language_server"
     }
   },
   {
@@ -4624,6 +4795,9 @@
     },
     "bin": {
       "fennel-ls": "luarocks:fennel-ls"
+    },
+    "neovim": {
+      "lspconfig": "fennel_ls"
     }
   },
   {
@@ -4751,6 +4925,9 @@
     },
     "bin": {
       "flux-lsp": "cargo:flux-lsp"
+    },
+    "neovim": {
+      "lspconfig": "flux_lsp"
     }
   },
   {
@@ -4771,6 +4948,9 @@
     },
     "bin": {
       "foam-ls": "npm:foam-ls"
+    },
+    "neovim": {
+      "lspconfig": "foam_ls"
     }
   },
   {
@@ -4791,6 +4971,9 @@
     },
     "bin": {
       "fortls": "pypi:fortls"
+    },
+    "neovim": {
+      "lspconfig": "fortls"
     }
   },
   {
@@ -4867,6 +5050,9 @@
     },
     "bin": {
       "fsautocomplete": "nuget:fsautocomplete"
+    },
+    "neovim": {
+      "lspconfig": "fsautocomplete"
     }
   },
   {
@@ -5058,6 +5244,9 @@
     },
     "bin": {
       "ginko_ls": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "ginko_ls"
     }
   },
   {
@@ -5081,6 +5270,9 @@
     },
     "bin": {
       "gitlab-ci-ls": "cargo:gitlab-ci-ls"
+    },
+    "neovim": {
+      "lspconfig": "gitlab_ci_ls"
     }
   },
   {
@@ -5320,6 +5512,9 @@
     "bin": {
       "glint": "npm:glint",
       "glint-language-server": "npm:glint-language-server"
+    },
+    "neovim": {
+      "lspconfig": "glint"
     }
   },
   {
@@ -5550,6 +5745,9 @@
     },
     "bin": {
       "glsl_analyzer": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "glsl_analyzer"
     }
   },
   {
@@ -5583,7 +5781,10 @@
     "bin": {
       "glslls": "{{source.build.bin}}"
     },
-    "ci_skip": true
+    "ci_skip": true,
+    "neovim": {
+      "lspconfig": "glslls"
+    }
   },
   {
     "name": "go-debug-adapter",
@@ -5684,7 +5885,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:golang/golang.org/x/tools@v0.32.0#cmd/goimports"
+      "id": "pkg:golang/golang.org/x/tools@v0.33.0#cmd/goimports"
     },
     "bin": {
       "goimports": "golang:goimports"
@@ -5708,6 +5909,9 @@
     },
     "bin": {
       "golangci-lint-langserver": "golang:golangci-lint-langserver"
+    },
+    "neovim": {
+      "lspconfig": "golangci_lint_ls"
     }
   },
   {
@@ -5873,6 +6077,9 @@
     },
     "bin": {
       "gopls": "golang:gopls"
+    },
+    "neovim": {
+      "lspconfig": "gopls"
     }
   },
   {
@@ -5958,6 +6165,9 @@
     },
     "bin": {
       "gradle-language-server": "java-jar:extension/lib/gradle-language-server.jar"
+    },
+    "neovim": {
+      "lspconfig": "gradle_ls"
     }
   },
   {
@@ -5982,6 +6192,9 @@
     },
     "bin": {
       "grammarly-languageserver": "npm:grammarly-languageserver"
+    },
+    "neovim": {
+      "lspconfig": "grammarly"
     }
   },
   {
@@ -6002,6 +6215,9 @@
     },
     "bin": {
       "graphql-lsp": "npm:graphql-lsp"
+    },
+    "neovim": {
+      "lspconfig": "graphql"
     }
   },
   {
@@ -6028,6 +6244,9 @@
     },
     "bin": {
       "groovy-language-server": "java-jar:build/libs/groovy-language-server-all.jar"
+    },
+    "neovim": {
+      "lspconfig": "groovyls"
     }
   },
   {
@@ -6117,7 +6336,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/elijah-potter/harper@v0.32.1",
+      "id": "pkg:github/elijah-potter/harper@v0.33.0",
       "asset": [
         {
           "target": "linux_x64_gnu",
@@ -6148,6 +6367,9 @@
     },
     "bin": {
       "harper-ls": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "harper_ls"
     }
   },
   {
@@ -6254,6 +6476,9 @@
       "haskell-language-server-9.8.4": "{{source.build.bin.server_9_8_4}}",
       "haskell-language-server-9.10.1": "{{source.build.bin.server_9_10_1}}",
       "haskell-language-server-9.12.2": "{{source.build.bin.server_9_12_2}}"
+    },
+    "neovim": {
+      "lspconfig": "hls"
     }
   },
   {
@@ -6277,6 +6502,9 @@
     },
     "bin": {
       "haxe-language-server": "node:extension/bin/server.js"
+    },
+    "neovim": {
+      "lspconfig": "haxe_language_server"
     }
   },
   {
@@ -6319,6 +6547,9 @@
     },
     "bin": {
       "hdl_checker": "pypi:hdl_checker"
+    },
+    "neovim": {
+      "lspconfig": "hdl_checker"
     }
   },
   {
@@ -6392,6 +6623,9 @@
     },
     "bin": {
       "helm_ls": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "helm_ls"
     }
   },
   {
@@ -6452,6 +6686,9 @@
     },
     "bin": {
       "hoon-language-server": "npm:hoon-language-server"
+    },
+    "neovim": {
+      "lspconfig": "hoon_ls"
     }
   },
   {
@@ -6475,6 +6712,9 @@
     },
     "bin": {
       "vscode-html-language-server": "npm:vscode-html-language-server"
+    },
+    "neovim": {
+      "lspconfig": "html"
     }
   },
   {
@@ -6536,6 +6776,9 @@
     },
     "bin": {
       "htmx-lsp": "cargo:htmx-lsp"
+    },
+    "neovim": {
+      "lspconfig": "htmx"
     }
   },
   {
@@ -6556,6 +6799,9 @@
     },
     "bin": {
       "hydra-lsp": "pypi:hydra-lsp"
+    },
+    "neovim": {
+      "lspconfig": "hydra_lsp"
     }
   },
   {
@@ -6576,6 +6822,9 @@
     },
     "bin": {
       "hyprls": "golang:hyprls"
+    },
+    "neovim": {
+      "lspconfig": "hyprls"
     }
   },
   {
@@ -6635,6 +6884,9 @@
     },
     "bin": {
       "intelephense": "npm:intelephense"
+    },
+    "neovim": {
+      "lspconfig": "intelephense"
     }
   },
   {
@@ -6733,6 +6985,9 @@
     "bin": {
       "java-language-server": "{{source.build.bin.lsp}}",
       "java-language-server-debugger": "{{source.build.bin.dap}}"
+    },
+    "neovim": {
+      "lspconfig": "java_language_server"
     }
   },
   {
@@ -6841,6 +7096,9 @@
       "jdtls/plugins/": "plugins/",
       "jdtls/plugins/org.eclipse.equinox.launcher.jar": "plugins/org.eclipse.equinox.launcher_1.7.0.v20250331-1702.jar",
       "jdtls/config/": "{{source.download.config}}"
+    },
+    "neovim": {
+      "lspconfig": "jdtls"
     }
   },
   {
@@ -6861,6 +7119,9 @@
     },
     "bin": {
       "jedi-language-server": "pypi:jedi-language-server"
+    },
+    "neovim": {
+      "lspconfig": "jedi_language_server"
     }
   },
   {
@@ -6888,6 +7149,9 @@
     },
     "bin": {
       "jinja-lsp": "cargo:jinja-lsp"
+    },
+    "neovim": {
+      "lspconfig": "jinja_lsp"
     }
   },
   {
@@ -6950,6 +7214,9 @@
     },
     "bin": {
       "jq-lsp": "golang:jq-lsp"
+    },
+    "neovim": {
+      "lspconfig": "jqls"
     }
   },
   {
@@ -7058,6 +7325,9 @@
     },
     "bin": {
       "vscode-json-language-server": "npm:vscode-json-language-server"
+    },
+    "neovim": {
+      "lspconfig": "jsonls"
     }
   },
   {
@@ -7156,6 +7426,9 @@
     },
     "bin": {
       "jsonnet-language-server": "golang:jsonnet-language-server"
+    },
+    "neovim": {
+      "lspconfig": "jsonnet_ls"
     }
   },
   {
@@ -7211,6 +7484,9 @@
     },
     "bin": {
       "julia-lsp": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "julials"
     }
   },
   {
@@ -7369,6 +7645,9 @@
     "bin": {
       "kcl": "{{source.asset.bin.kcl}}",
       "kcl-language-server": "{{source.asset.bin.kcl_language_server}}"
+    },
+    "neovim": {
+      "lspconfig": "kcl"
     }
   },
   {
@@ -7444,6 +7723,9 @@
     },
     "bin": {
       "kotlin-language-server": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "kotlin_language_server"
     }
   },
   {
@@ -7668,6 +7950,9 @@
     "bin": {
       "lelwel-ls": "cargo:lelwel-ls",
       "llw": "cargo:llw"
+    },
+    "neovim": {
+      "lspconfig": "lelwel_ls"
     }
   },
   {
@@ -7713,6 +7998,9 @@
     },
     "bin": {
       "lemminx": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "lemminx"
     }
   },
   {
@@ -7809,6 +8097,9 @@
     },
     "bin": {
       "lexical": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "lexical"
     }
   },
   {
@@ -8025,6 +8316,9 @@
     "bin": {
       "ltex-ls": "{{source.asset.bin.lsp}}",
       "ltex-cli": "{{source.asset.bin.cli}}"
+    },
+    "neovim": {
+      "lspconfig": "ltex"
     }
   },
   {
@@ -8149,6 +8443,9 @@
     },
     "bin": {
       "lua-language-server": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "lua_ls"
     }
   },
   {
@@ -8232,6 +8529,9 @@
     },
     "bin": {
       "luau-lsp": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "luau_lsp"
     }
   },
   {
@@ -8253,6 +8553,9 @@
     },
     "bin": {
       "lwc-language-server": "npm:lwc-language-server"
+    },
+    "neovim": {
+      "lspconfig": "lwc_ls"
     }
   },
   {
@@ -8323,6 +8626,9 @@
     },
     "bin": {
       "markdown-oxide": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "markdown_oxide"
     }
   },
   {
@@ -8444,6 +8750,9 @@
     },
     "bin": {
       "marksman": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "marksman"
     }
   },
   {
@@ -8487,6 +8796,9 @@
     },
     "bin": {
       "matlab-language-server": "node:out/index.js"
+    },
+    "neovim": {
+      "lspconfig": "matlab_ls"
     }
   },
   {
@@ -8584,6 +8896,9 @@
     },
     "bin": {
       "mdx-language-server": "npm:mdx-language-server"
+    },
+    "neovim": {
+      "lspconfig": "mdx_analyzer"
     }
   },
   {
@@ -8626,6 +8941,9 @@
     },
     "bin": {
       "mesonlsp": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "mesonlsp"
     }
   },
   {
@@ -8662,7 +8980,10 @@
     "bin": {
       "mm0-rs": "{{source.build.bin}}"
     },
-    "ci_skip": true
+    "ci_skip": true,
+    "neovim": {
+      "lspconfig": "mm0_ls"
+    }
   },
   {
     "name": "millet",
@@ -8718,6 +9039,9 @@
     },
     "bin": {
       "millet": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "millet"
     }
   },
   {
@@ -8783,6 +9107,9 @@
     },
     "bin": {
       "motoko-lsp": "node:extension/out/server.js"
+    },
+    "neovim": {
+      "lspconfig": "motoko_lsp"
     }
   },
   {
@@ -8803,6 +9130,9 @@
     },
     "bin": {
       "move-analyzer": "cargo:move-analyzer"
+    },
+    "neovim": {
+      "lspconfig": "move_analyzer"
     }
   },
   {
@@ -8823,6 +9153,9 @@
     },
     "bin": {
       "mutt-language-server": "pypi:mutt-language-server"
+    },
+    "neovim": {
+      "lspconfig": "mutt_ls"
     }
   },
   {
@@ -8887,6 +9220,9 @@
     },
     "bin": {
       "neocmakelsp": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "neocmake"
     }
   },
   {
@@ -9002,6 +9338,9 @@
     },
     "bin": {
       "nextls": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "nextls"
     }
   },
   {
@@ -9042,6 +9381,9 @@
     },
     "bin": {
       "nginx-language-server": "pypi:nginx-language-server"
+    },
+    "neovim": {
+      "lspconfig": "nginx_language_server"
     }
   },
   {
@@ -9065,6 +9407,9 @@
     },
     "bin": {
       "nls": "cargo:nls"
+    },
+    "neovim": {
+      "lspconfig": "nickel_ls"
     }
   },
   {
@@ -9086,6 +9431,9 @@
     },
     "bin": {
       "nil": "cargo:nil"
+    },
+    "neovim": {
+      "lspconfig": "nil_ls"
     }
   },
   {
@@ -9197,6 +9545,9 @@
     },
     "bin": {
       "nimlangserver": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "nim_langserver"
     }
   },
   {
@@ -9229,6 +9580,9 @@
     },
     "bin": {
       "nimlsp": "{{source.build.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "nimls"
     }
   },
   {
@@ -9335,6 +9689,9 @@
     },
     "bin": {
       "nomicfoundation-solidity-language-server": "npm:nomicfoundation-solidity-language-server"
+    },
+    "neovim": {
+      "lspconfig": "solidity_ls_nomicfoundation"
     }
   },
   {
@@ -9444,6 +9801,9 @@
     },
     "bin": {
       "ocamllsp": "opam:ocamllsp"
+    },
+    "neovim": {
+      "lspconfig": "ocamllsp"
     }
   },
   {
@@ -9554,6 +9914,9 @@
     },
     "bin": {
       "ols": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "ols"
     }
   },
   {
@@ -9604,6 +9967,9 @@
     },
     "bin": {
       "omnisharp-mono": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "omnisharp_mono"
     }
   },
   {
@@ -9653,6 +10019,9 @@
     },
     "bin": {
       "omnisharp": "dotnet:libexec/OmniSharp.dll"
+    },
+    "neovim": {
+      "lspconfig": "omnisharp"
     }
   },
   {
@@ -9745,6 +10114,9 @@
     },
     "bin": {
       "opencl-language-server": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "opencl_ls"
     }
   },
   {
@@ -9813,6 +10185,9 @@
     },
     "bin": {
       "openscad-lsp": "cargo:openscad-lsp"
+    },
+    "neovim": {
+      "lspconfig": "openscad_lsp"
     }
   },
   {
@@ -9901,6 +10276,9 @@
     },
     "bin": {
       "pbls": "cargo:pbls"
+    },
+    "neovim": {
+      "lspconfig": "pbls"
     }
   },
   {
@@ -9947,6 +10325,9 @@
     },
     "bin": {
       "perlnavigator": "node:node_modules/perlnavigator-server/out/server.js"
+    },
+    "neovim": {
+      "lspconfig": "perlnavigator"
     }
   },
   {
@@ -9970,6 +10351,9 @@
     },
     "bin": {
       "pest-language-server": "cargo:pest-language-server"
+    },
+    "neovim": {
+      "lspconfig": "pest_ls"
     }
   },
   {
@@ -10063,6 +10447,9 @@
     },
     "bin": {
       "phpactor": "php:phpactor.phar"
+    },
+    "neovim": {
+      "lspconfig": "phpactor"
     }
   },
   {
@@ -10181,6 +10568,9 @@
     },
     "bin": {
       "pico8-ls": "node:server/out-min/main.js"
+    },
+    "neovim": {
+      "lspconfig": "pico8_ls"
     }
   },
   {
@@ -10226,7 +10616,10 @@
     "bin": {
       "pkgbuild-language-server": "pypi:pkgbuild-language-server"
     },
-    "ci_skip": true
+    "ci_skip": true,
+    "neovim": {
+      "lspconfig": "pkgbuild_language_server"
+    }
   },
   {
     "name": "pkl-lsp",
@@ -10323,6 +10716,9 @@
     },
     "schemas": {
       "lsp": "vscode:https://raw.githubusercontent.com/PowerShell/vscode-powershell/main/package.json"
+    },
+    "neovim": {
+      "lspconfig": "powershell_es"
     }
   },
   {
@@ -10475,6 +10871,9 @@
     },
     "bin": {
       "prisma-language-server": "npm:prisma-language-server"
+    },
+    "neovim": {
+      "lspconfig": "prismals"
     }
   },
   {
@@ -10533,6 +10932,9 @@
     },
     "bin": {
       "prosemd-lsp": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "prosemd_lsp"
     }
   },
   {
@@ -10696,7 +11098,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:composer/vimeo/psalm@6.10.2"
+      "id": "pkg:composer/vimeo/psalm@6.10.3"
     },
     "bin": {
       "psalm": "composer:psalm",
@@ -10710,7 +11112,10 @@
     },
     "ci_skip": [
       "win_x64"
-    ]
+    ],
+    "neovim": {
+      "lspconfig": "psalm"
+    }
   },
   {
     "name": "puppet-editor-services",
@@ -10738,6 +11143,9 @@
     "bin": {
       "puppet-languageserver": "ruby:libexec/puppet-languageserver",
       "puppet-debugserver": "ruby:libexec/puppet-debugserver"
+    },
+    "neovim": {
+      "lspconfig": "puppet"
     }
   },
   {
@@ -10761,6 +11169,9 @@
     },
     "bin": {
       "purescript-language-server": "npm:purescript-language-server"
+    },
+    "neovim": {
+      "lspconfig": "purescriptls"
     }
   },
   {
@@ -10933,6 +11344,9 @@
     },
     "bin": {
       "pylyzer": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "pylyzer"
     }
   },
   {
@@ -11035,6 +11449,9 @@
     },
     "bin": {
       "pyre": "pypi:pyre"
+    },
+    "neovim": {
+      "lspconfig": "pyre"
     }
   },
   {
@@ -11059,6 +11476,9 @@
     "bin": {
       "pyright": "npm:pyright",
       "pyright-langserver": "npm:pyright-langserver"
+    },
+    "neovim": {
+      "lspconfig": "pyright"
     }
   },
   {
@@ -11082,6 +11502,9 @@
     },
     "bin": {
       "pylsp": "pypi:pylsp"
+    },
+    "neovim": {
+      "lspconfig": "pylsp"
     }
   },
   {
@@ -11170,6 +11593,9 @@
     },
     "share": {
       "man/": "{{source.download.man}}"
+    },
+    "neovim": {
+      "lspconfig": "quick_lint_js"
     }
   },
   {
@@ -11211,6 +11637,9 @@
     },
     "bin": {
       "r-languageserver": "{{source.build.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "r_language_server"
     }
   },
   {
@@ -11237,6 +11666,9 @@
     },
     "bin": {
       "raku-navigator": "node:server/out/server.js"
+    },
+    "neovim": {
+      "lspconfig": "raku_navigator"
     }
   },
   {
@@ -11280,6 +11712,9 @@
     },
     "bin": {
       "reason-language-server": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "reason_ls"
     }
   },
   {
@@ -11363,6 +11798,9 @@
     },
     "bin": {
       "regal": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "regal"
     }
   },
   {
@@ -11383,6 +11821,9 @@
     },
     "bin": {
       "regols": "golang:regols"
+    },
+    "neovim": {
+      "lspconfig": "regols"
     }
   },
   {
@@ -11423,6 +11864,9 @@
     },
     "bin": {
       "remark-language-server": "npm:remark-language-server"
+    },
+    "neovim": {
+      "lspconfig": "remark_ls"
     }
   },
   {
@@ -11466,6 +11910,9 @@
     },
     "bin": {
       "rescript-language-server": "npm:rescript-language-server"
+    },
+    "neovim": {
+      "lspconfig": "rescriptls"
     }
   },
   {
@@ -11554,6 +12001,9 @@
     },
     "bin": {
       "rnix-lsp": "cargo:rnix-lsp"
+    },
+    "neovim": {
+      "lspconfig": "rnix"
     }
   },
   {
@@ -11598,6 +12048,9 @@
     },
     "bin": {
       "robotframework_ls": "pypi:robotframework_ls"
+    },
+    "neovim": {
+      "lspconfig": "robotframework_ls"
     }
   },
   {
@@ -11629,6 +12082,9 @@
     },
     "bin": {
       "rome": "npm:rome"
+    },
+    "neovim": {
+      "lspconfig": "rome"
     }
   },
   {
@@ -11691,6 +12147,9 @@
     },
     "bin": {
       "rubocop": "gem:rubocop"
+    },
+    "neovim": {
+      "lspconfig": "rubocop"
     }
   },
   {
@@ -11717,6 +12176,9 @@
     },
     "bin": {
       "ruby-lsp": "gem:ruby-lsp"
+    },
+    "neovim": {
+      "lspconfig": "ruby_lsp"
     }
   },
   {
@@ -11824,6 +12286,9 @@
     },
     "bin": {
       "ruff": "pypi:ruff"
+    },
+    "neovim": {
+      "lspconfig": "ruff"
     }
   },
   {
@@ -11905,6 +12370,9 @@
     },
     "bin": {
       "rust-analyzer": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "rust_analyzer"
     }
   },
   {
@@ -11948,6 +12416,9 @@
     },
     "share": {
       "vhdl_libraries/": "{{source.asset.libraries}}"
+    },
+    "neovim": {
+      "lspconfig": "vhdl_ls"
     }
   },
   {
@@ -12058,6 +12529,9 @@
     },
     "bin": {
       "salt_lsp_server": "pypi:salt_lsp_server"
+    },
+    "neovim": {
+      "lspconfig": "salt_ls"
     }
   },
   {
@@ -12177,6 +12651,9 @@
     },
     "bin": {
       "serve-d": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "serve_d"
     }
   },
   {
@@ -12319,6 +12796,9 @@
     },
     "bin": {
       "shopify": "npm:shopify"
+    },
+    "neovim": {
+      "lspconfig": "shopify_theme_ls"
     }
   },
   {
@@ -12344,6 +12824,9 @@
     },
     "bin": {
       "theme-check-language-server": "gem:theme-check-language-server"
+    },
+    "neovim": {
+      "lspconfig": "theme_check"
     }
   },
   {
@@ -12537,6 +13020,9 @@
     },
     "bin": {
       "slint-lsp": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "slint_lsp"
     }
   },
   {
@@ -12584,6 +13070,9 @@
     },
     "bin": {
       "smithy-language-server": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "smithy_ls"
     }
   },
   {
@@ -12624,6 +13113,9 @@
     },
     "bin": {
       "snakeskin-cli": "npm:snakeskin-cli"
+    },
+    "neovim": {
+      "lspconfig": "snakeskin_ls"
     }
   },
   {
@@ -12674,6 +13166,9 @@
     },
     "bin": {
       "snyk-ls": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "snyk_ls"
     }
   },
   {
@@ -12818,6 +13313,9 @@
     },
     "bin": {
       "solang": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "solang"
     }
   },
   {
@@ -12841,6 +13339,9 @@
     },
     "bin": {
       "solargraph": "gem:solargraph"
+    },
+    "neovim": {
+      "lspconfig": "solargraph"
     }
   },
   {
@@ -12857,7 +13358,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:npm/solhint@5.0.5"
+      "id": "pkg:npm/solhint@5.1.0"
     },
     "bin": {
       "solhint": "npm:solhint"
@@ -12881,6 +13382,9 @@
     },
     "bin": {
       "solidity-ls": "npm:solidity-ls"
+    },
+    "neovim": {
+      "lspconfig": "solidity"
     }
   },
   {
@@ -12919,6 +13423,9 @@
     },
     "bin": {
       "solc": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "solc"
     }
   },
   {
@@ -12942,6 +13449,9 @@
     },
     "bin": {
       "some-sass-language-server": "npm:some-sass-language-server"
+    },
+    "neovim": {
+      "lspconfig": "somesass_ls"
     }
   },
   {
@@ -13016,6 +13526,9 @@
     },
     "bin": {
       "srb": "gem:srb"
+    },
+    "neovim": {
+      "lspconfig": "sorbet"
     }
   },
   {
@@ -13039,6 +13552,9 @@
     },
     "bin": {
       "sourcery": "pypi:sourcery"
+    },
+    "neovim": {
+      "lspconfig": "sourcery"
     }
   },
   {
@@ -13066,6 +13582,9 @@
     },
     "bin": {
       "spectral-language-server": "node:dist/server/index.js"
+    },
+    "neovim": {
+      "lspconfig": "spectral"
     }
   },
   {
@@ -13190,6 +13709,9 @@
     },
     "bin": {
       "sql-language-server": "npm:sql-language-server"
+    },
+    "neovim": {
+      "lspconfig": "sqlls"
     }
   },
   {
@@ -13213,6 +13735,9 @@
     },
     "bin": {
       "sqls": "golang:sqls"
+    },
+    "neovim": {
+      "lspconfig": "sqls"
     }
   },
   {
@@ -13303,6 +13828,9 @@
     },
     "bin": {
       "standardrb": "gem:standardrb"
+    },
+    "neovim": {
+      "lspconfig": "standardrb"
     }
   },
   {
@@ -13326,6 +13854,9 @@
     },
     "bin": {
       "starlark": "cargo:starlark"
+    },
+    "neovim": {
+      "lspconfig": "starlark_rust"
     }
   },
   {
@@ -13361,6 +13892,9 @@
     },
     "bin": {
       "starpls": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "starpls"
     }
   },
   {
@@ -13401,6 +13935,9 @@
     },
     "bin": {
       "steep": "gem:steep"
+    },
+    "neovim": {
+      "lspconfig": "steep"
     }
   },
   {
@@ -13427,6 +13964,9 @@
     },
     "bin": {
       "stimulus-language-server": "npm:stimulus-language-server"
+    },
+    "neovim": {
+      "lspconfig": "stimulus_ls"
     }
   },
   {
@@ -13470,6 +14010,9 @@
     },
     "bin": {
       "stylelint-lsp": "npm:stylelint-lsp"
+    },
+    "neovim": {
+      "lspconfig": "stylelint_lsp"
     }
   },
   {
@@ -13669,6 +14212,9 @@
     },
     "bin": {
       "superhtml": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "superhtml"
     }
   },
   {
@@ -13695,6 +14241,9 @@
     },
     "bin": {
       "svelteserver": "npm:svelteserver"
+    },
+    "neovim": {
+      "lspconfig": "svelte"
     }
   },
   {
@@ -13718,6 +14267,9 @@
     },
     "bin": {
       "svlangserver": "npm:svlangserver"
+    },
+    "neovim": {
+      "lspconfig": "svlangserver"
     }
   },
   {
@@ -13744,7 +14296,10 @@
       "win_arm64",
       "win_x64",
       "win_x86"
-    ]
+    ],
+    "neovim": {
+      "lspconfig": "svls"
+    }
   },
   {
     "name": "swift-mesonlsp",
@@ -13785,6 +14340,9 @@
     },
     "bin": {
       "Swift-MesonLSP": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "swift_mesonls"
     }
   },
   {
@@ -13916,6 +14474,9 @@
     },
     "bin": {
       "tailwindcss-language-server": "npm:tailwindcss-language-server"
+    },
+    "neovim": {
+      "lspconfig": "tailwindcss"
     }
   },
   {
@@ -13973,6 +14534,9 @@
     },
     "bin": {
       "taplo": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "taplo"
     }
   },
   {
@@ -13993,6 +14557,9 @@
     },
     "bin": {
       "teal-language-server": "luarocks:teal-language-server"
+    },
+    "neovim": {
+      "lspconfig": "teal_ls"
     }
   },
   {
@@ -14108,6 +14675,9 @@
     },
     "bin": {
       "templ": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "templ"
     }
   },
   {
@@ -14216,6 +14786,9 @@
     },
     "bin": {
       "terraform-ls": "{{source.download.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "terraformls"
     }
   },
   {
@@ -14335,6 +14908,9 @@
     },
     "bin": {
       "texlab": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "texlab"
     }
   },
   {
@@ -14378,6 +14954,9 @@
     },
     "bin": {
       "textlsp": "pypi:textlsp"
+    },
+    "neovim": {
+      "lspconfig": "textlsp"
     }
   },
   {
@@ -14431,6 +15010,9 @@
     },
     "bin": {
       "tflint": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "tflint"
     }
   },
   {
@@ -14527,6 +15109,9 @@
     },
     "bin": {
       "thriftls": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "thriftls"
     }
   },
   {
@@ -14636,6 +15221,9 @@
     },
     "bin": {
       "tinymist": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "tinymist"
     }
   },
   {
@@ -14793,7 +15381,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/trufflesecurity/trufflehog@v3.88.27",
+      "id": "pkg:github/trufflesecurity/trufflehog@v3.88.28",
       "asset": [
         {
           "target": "darwin_x64",
@@ -14920,6 +15508,9 @@
     },
     "bin": {
       "tsp-server": "npm:tsp-server"
+    },
+    "neovim": {
+      "lspconfig": "tsp_server"
     }
   },
   {
@@ -14988,6 +15579,9 @@
     },
     "bin": {
       "twiggy-language-server": "node:node_modules/twiggy-language-server/dist/server.js"
+    },
+    "neovim": {
+      "lspconfig": "twiggy_language_server"
     }
   },
   {
@@ -15015,6 +15609,9 @@
     },
     "bin": {
       "typescript-language-server": "npm:typescript-language-server"
+    },
+    "neovim": {
+      "lspconfig": "ts_ls"
     }
   },
   {
@@ -15083,6 +15680,9 @@
     },
     "bin": {
       "typos-lsp": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "typos_lsp"
     }
   },
   {
@@ -15324,6 +15924,9 @@
     },
     "bin": {
       "unocss-language-server": "npm:unocss-language-server"
+    },
+    "neovim": {
+      "lspconfig": "unocss"
     }
   },
   {
@@ -15389,6 +15992,9 @@
     },
     "bin": {
       "v-analyzer": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "v_analyzer"
     }
   },
   {
@@ -15451,6 +16057,9 @@
     },
     "bin": {
       "vacuum": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "vacuum"
     }
   },
   {
@@ -15484,7 +16093,10 @@
     "bin": {
       "vala-language-server": "{{source.build.bin}}"
     },
-    "ci_skip": true
+    "ci_skip": true,
+    "neovim": {
+      "lspconfig": "vala_ls"
+    }
   },
   {
     "name": "vale-ls",
@@ -15532,6 +16144,9 @@
     },
     "bin": {
       "vale-ls": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "vale_ls"
     }
   },
   {
@@ -15679,6 +16294,9 @@
       "verible-verilog-preprocessor": "{{source.asset.bin.preprocessor}}",
       "verible-verilog-project": "{{source.asset.bin.project}}",
       "verible-verilog-syntax": "{{source.asset.bin.syntax}}"
+    },
+    "neovim": {
+      "lspconfig": "verible"
     }
   },
   {
@@ -15725,6 +16343,9 @@
     },
     "bin": {
       "veryl-ls": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "veryl_ls"
     }
   },
   {
@@ -15748,6 +16369,9 @@
     },
     "bin": {
       "vls": "npm:vls"
+    },
+    "neovim": {
+      "lspconfig": "vuels"
     }
   },
   {
@@ -15788,6 +16412,9 @@
     },
     "bin": {
       "vim-language-server": "npm:vim-language-server"
+    },
+    "neovim": {
+      "lspconfig": "vimls"
     }
   },
   {
@@ -15834,6 +16461,9 @@
     },
     "bin": {
       "visualforce-language-server": "node:extension/dist/visualforceServer.js"
+    },
+    "neovim": {
+      "lspconfig": "visualforce_ls"
     }
   },
   {
@@ -15871,6 +16501,9 @@
     },
     "bin": {
       "vls": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "vls"
     }
   },
   {
@@ -15917,6 +16550,9 @@
     },
     "bin": {
       "vscode-solidity-server": "npm:vscode-solidity-server"
+    },
+    "neovim": {
+      "lspconfig": "solidity_ls"
     }
   },
   {
@@ -15962,6 +16598,9 @@
     },
     "bin": {
       "vtsls": "npm:vtsls"
+    },
+    "neovim": {
+      "lspconfig": "vtsls"
     }
   },
   {
@@ -15978,7 +16617,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40vue/language-server@2.2.8",
+      "id": "pkg:npm/%40vue/language-server@2.2.10",
       "extra_packages": [
         "typescript"
       ]
@@ -15988,6 +16627,9 @@
     },
     "bin": {
       "vue-language-server": "npm:vue-language-server"
+    },
+    "neovim": {
+      "lspconfig": "volar"
     }
   },
   {
@@ -16093,6 +16735,9 @@
     },
     "bin": {
       "wgsl_analyzer": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "wgsl_analyzer"
     }
   },
   {
@@ -16283,6 +16928,9 @@
     },
     "bin": {
       "yaml-language-server": "npm:yaml-language-server"
+    },
+    "neovim": {
+      "lspconfig": "yamlls"
     }
   },
   {
@@ -16593,6 +17241,9 @@
     },
     "bin": {
       "zk": "zk"
+    },
+    "neovim": {
+      "lspconfig": "zk"
     }
   },
   {
@@ -16732,6 +17383,9 @@
     },
     "bin": {
       "zls": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "zls"
     }
   },
   {
