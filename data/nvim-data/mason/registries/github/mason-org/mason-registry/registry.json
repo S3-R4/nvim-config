@@ -4395,6 +4395,9 @@
     },
     "bin": {
       "emmylua_ls": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "emmylua_ls"
     }
   },
   {
@@ -6135,7 +6138,7 @@
     ],
     "categories": [],
     "source": {
-      "id": "pkg:golang/gotest.tools/gotestsum@v1.12.1"
+      "id": "pkg:golang/gotest.tools/gotestsum@v1.12.2"
     },
     "bin": {
       "gotestsum": "golang:gotestsum"
@@ -7587,6 +7590,9 @@
     },
     "bin": {
       "just-lsp": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "just"
     }
   },
   {
@@ -8263,6 +8269,9 @@
     "bin": {
       "ltex-ls-plus": "{{source.asset.bin.lsp}}",
       "ltex-cli-plus": "{{source.asset.bin.cli}}"
+    },
+    "neovim": {
+      "lspconfig": "ltex_plus"
     }
   },
   {
@@ -13516,7 +13525,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/sorbet@0.5.12060",
+      "id": "pkg:gem/sorbet@0.5.12067",
       "supported_platforms": [
         "unix"
       ]
@@ -15485,6 +15494,9 @@
     },
     "bin": {
       "ts_query_ls": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "ts_query_ls"
     }
   },
   {
@@ -16214,7 +16226,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:github/chipsalliance/verible@v0.0-3975-g97d6002a",
+      "id": "pkg:github/chipsalliance/verible@v0.0-3977-gf379fafd",
       "asset": [
         {
           "target": "linux_x64",
