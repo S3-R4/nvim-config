@@ -1,6 +1,12 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =4
-let g:netrw_dirhist_4='C:/Users/ahmet/Documents/MainVault/Okul/PW'
-let g:netrw_dirhist_3='C:/Users/ahmet/Documents/MainVault/Okul'
-let g:netrw_dirhist_2='C:/Users/ahmet/Documents/MainVault'
-let g:netrw_dirhist_1='C:/Users/ahmet/Documents'
+let g:netrw_dirhist_4='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR/cmd/trainer'
+let g:netrw_dirhist_3='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR/cmd'
+let g:netrw_dirhist_2='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR'
+let g:netrw_dirhist_1='C:/Users/ahmet/Documents/Documents/Programming/Go'
+let g:netrw_dirhist_0='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR/cmd/trainer'
+let g:netrw_dirhist_9='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR/cmd'
+let g:netrw_dirhist_8='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR'
+let g:netrw_dirhist_7='C:/Users/ahmet/Documents/Documents/Programming/Go'
+let g:netrw_dirhist_6='C:/Users/ahmet/Documents/Documents/Programming/Go/S3R4v2NewSuspended'
+let g:netrw_dirhist_5='C:/Users/ahmet/Documents/Documents/Programming/Go'

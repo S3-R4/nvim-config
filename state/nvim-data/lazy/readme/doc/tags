@@ -1,4 +1,46 @@
 !_TAG_FILE_ENCODING	utf-8	//
+andromeda-andromeda-theme-for-neovim	andromeda.md	/# Andromeda Theme for Neovim
+andromeda-customization	andromeda.md	/## Customization
+andromeda-customizing-accent-color-s	andromeda.md	/### Customizing accent color(s)
+andromeda-customizing-background-s	andromeda.md	/### Customizing background(s)
+andromeda-customizing-font-style-s	andromeda.md	/### Customizing font style(s)
+andromeda-installation	andromeda.md	/## Installation
+andromeda-supported-plugins-as-of-right-now	andromeda.md	/## Supported plugins (as of right now)
+andromeda-table-of-content	andromeda.md	/## Table of Content
+andromeda-thank-you	andromeda.md	/## Thank You
+colorbuddy.nvim-basic-usage	colorbuddy.nvim.md	/# Basic Usage
+colorbuddy.nvim-colorbuddy-nvim	colorbuddy.nvim.md	/# colorbuddy.nvim
+colorbuddy.nvim-example	colorbuddy.nvim.md	/## Example
+colorbuddy.nvim-installation	colorbuddy.nvim.md	/# Installation
+colorbuddy.nvim-lazy-nvim-https-github-com-folke-lazy-nvim	colorbuddy.nvim.md	/## \[lazy.nvim\](https:\/\/github.com\/folke\/lazy.nvim)
+colorbuddy.nvim-made-with-colorbuddy	colorbuddy.nvim.md	/## Made with Colorbuddy
+colorbuddy.nvim-packer-https-github-com-wbthomason-packer-nvim	colorbuddy.nvim.md	/## \[Packer\](https:\/\/github.com\/wbthomason\/packer.nvim)
+colorbuddy.nvim-vim-plug-https-github-com-junegunn-vim-plug	colorbuddy.nvim.md	/## \[vim-plug\](https:\/\/github.com\/junegunn\/vim-plug)
+harpoon-commands-to-terminals	harpoon.md	/### Commands to Terminals
+harpoon-configuration	harpoon.md	/## ⇁ Configuration
+harpoon-file-navigation	harpoon.md	/### File Navigation
+harpoon-getting-you-where-you-want-with-the-fewest-keystrokes	harpoon.md	/##### Getting you where you want with the fewest keystrokes.
+harpoon-global-settings	harpoon.md	/### Global Settings
+harpoon-harpoon	harpoon.md	/# Harpoon
+harpoon-harpoon-2	harpoon.md	/## ⇁  HARPOON 2
+harpoon-harpooning	harpoon.md	/## ⇁ Harpooning
+harpoon-how-do-harpoon-marks-differ-from-vim-global-marks	harpoon.md	/#### How do Harpoon marks differ from vim global marks
+harpoon-installation	harpoon.md	/## ⇁ Installation
+harpoon-legacy-harpoon-readme	harpoon.md	/# Legacy Harpoon README
+harpoon-logging	harpoon.md	/## ⇁ Logging
+harpoon-marks	harpoon.md	/### Marks
+harpoon-others	harpoon.md	/## ⇁ Others
+harpoon-preconfigured-terminal-commands	harpoon.md	/### Preconfigured Terminal Commands
+harpoon-social	harpoon.md	/## ⇁ Social
+harpoon-tabline	harpoon.md	/#### Tabline
+harpoon-telescope-support	harpoon.md	/### Telescope Support
+harpoon-terminal-navigation	harpoon.md	/### Terminal Navigation
+harpoon-the-motivation-behind-harpoon-terminals	harpoon.md	/#### The Motivation behind Harpoon terminals
+harpoon-the-problems	harpoon.md	/## ⇁ The Problems:
+harpoon-the-solutions	harpoon.md	/## ⇁  The Solutions:
+harpoon-tmux-support	harpoon.md	/### Tmux Support
+harpoon-use-a-dynamic-width-for-the-harpoon-popup-menu	harpoon.md	/#### Use a dynamic width for the Harpoon popup menu
+harpoon-wip	harpoon.md	/## ⇁  WIP
 nvim-web-devicons-additional-icons	nvim-web-devicons.md	/## Additional Icons
 nvim-web-devicons-case-sensitivity	nvim-web-devicons.md	/### Case Sensitivity
 nvim-web-devicons-contributing	nvim-web-devicons.md	/## Contributing
@@ -17,3 +59,16 @@ nvim-web-devicons-usage	nvim-web-devicons.md	/## Usage
 nvim-web-devicons-variants	nvim-web-devicons.md	/### Variants
 nvim-web-devicons-viewing	nvim-web-devicons.md	/### Viewing
 nvim-web-devicons-windows-and-wsl-not-rendering-icons-properly-on-some-terminals	nvim-web-devicons.md	/### Windows and WSL not rendering icons properly on some terminals
+project.nvim-api	project.nvim.md	/## API
+project.nvim-configuration	project.nvim.md	/## ⚙️ Configuration
+project.nvim-contributing	project.nvim.md	/## 🤝 Contributing
+project.nvim-features	project.nvim.md	/## ✨ Features
+project.nvim-installation	project.nvim.md	/## 📦 Installation
+project.nvim-packer-https-github-com-wbthomason-packer-nvim	project.nvim.md	/### \[packer\](https:\/\/github.com\/wbthomason\/packer.nvim)
+project.nvim-pattern-matching	project.nvim.md	/### Pattern Matching
+project.nvim-project-nvim	project.nvim.md	/# 🗃️ project.nvim
+project.nvim-requirements	project.nvim.md	/## ⚡ Requirements
+project.nvim-telescope-integration	project.nvim.md	/### Telescope Integration
+project.nvim-telescope-mappings	project.nvim.md	/#### Telescope mappings
+project.nvim-telescope-projects-picker	project.nvim.md	/#### Telescope Projects Picker
+project.nvim-vim-plug-https-github-com-junegunn-vim-plug	project.nvim.md	/### \[vim-plug\](https:\/\/github.com\/junegunn\/vim-plug)

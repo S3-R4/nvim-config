@@ -2,20 +2,24 @@
 vim.g.mapleader = " " -- space is the leader key. its like Super or Win button but for vim
 vim.g.maplocalleader = " "
 
+-- nvim-telescope keybinds
+vim.keymap.set("n", "<leader>te", function()
+    require("telescope").extensions.file_browser.file_browser({
+      path = vim.fn.expand("%:p:h"), -- start at current buffer’s folder
+      select_buffer = true,
+      grouped = true,
+      hidden = true,
+      respect_gitignore = false,
+    })
+  end, { desc = "File browser at current file path" })  
 
-
---- Keybindings
--- vim.keymap.set("n", "<C-e>f", ":NvimTreeToggle<CR>", { noremap = true, silent = true }) -- its for toggling the file explorer
----;;;END OF Keybindings
-
---- nvim-telescope keybinds
-vim.keymap.set("n", "<space>fb", ":Telescope file_browser<CR>")
-
--- open file_browser with the path of the current buffer
-vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
-
--- Alternatively, using lua API
-vim.keymap.set("n", "<space>fb", function()
-	require("telescope").extensions.file_browser.file_browser()
-end)
+  vim.keymap.set("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Find Projects" }) -- its for project-nvim
 ---;;;;END OF nvim-telescope keybinds
+
+--- harpoon keybinds
+vim.keymap.set("n", "<leader>ha", function() require("harpoon.mark").add_file() end)
+vim.keymap.set("n", "<leader>h1", function() require("harpoon.ui").nav_file(1) end)
+vim.keymap.set("n", "<leader>h2", function() require("harpoon.ui").nav_file(2) end)
+
+vim.keymap.set("n", "<leader>hm", ":Telescope harpoon marks<CR>", { desc = "Telescope Harpoon Marks" })
+---;;;END OF harpoon keybinds

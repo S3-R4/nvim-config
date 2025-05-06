@@ -23,6 +23,22 @@ vim.opt.runtimepath:prepend(lazypath)
 
 --- Setup Lazy.nvim
 require("lazy").setup({
+    ---installing andromeda color theme
+    {
+        "nobbmaestro/nvim-andromeda",
+        name = "andromeda",
+        dependencies = { "tjdevries/colorbuddy.nvim" },
+        priority = 1000,
+        config = function()
+          vim.g.andromeda_enable_italic = true
+          vim.g.andromeda_disable_italic_comment = false
+          vim.g.andromeda_cursor = "auto"
+          vim.g.andromeda_transparent = true
+          vim.cmd("colorscheme andromeda")
+        end
+      },
+    ---;;;END OF andromeda color theme
+
     ---get Mason
     {
         "williamboman/mason.nvim",
@@ -62,8 +78,34 @@ require("lazy").setup({
         end,
         dependencies = { {'nvim-tree/nvim-web-devicons'} }
     },
-    
-    ---;;;END OF dashboard-nvim 
+    ---;;;END OF dashboard-nvim
+
+    --- harpoon 
+    {
+        'ThePrimeagen/harpoon',
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function()
+          require("harpoon").setup()
+        end
+    },
+    ---;;;END OF harpoon 
+
+    --- project-nvim
+    {
+        'ahmedkhalf/project.nvim',
+        config = function()
+            require('project_nvim').setup {
+                manual_mode = false,  -- Automatically change root directory
+                detection_methods = { 'lsp', 'pattern' },
+                patterns = { '.git', 'Makefile', 'package.json' },
+                show_hidden = true,
+                silent_chdir = true,
+                scope_chdir = 'global',
+              }
+              
+        end
+    }
+    ---;;;END OF project-nvim      
 
 })
 ---;;;END OF Lazy Setup
