@@ -9,6 +9,11 @@ mason/
 site/
 packer_compiled.lua
 
+# Neovim state files
+Neovim/state/
+Neovim/undo/
+Neovim/backup/
+Neovim/swap/
 
 # Mason binaries and packages
 .mason
