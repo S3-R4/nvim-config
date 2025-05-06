@@ -1,0 +1,26 @@
+# Ignore Lazy.nvim, Mason, or Packer plugin directories
+lazy/lazy.nvim
+site/pack/*/start/*
+site/pack/*/opt/*
+
+# Mason binaries and packages
+.mason
+
+# Undo, backup, and swap files
+*.un~
+*.swp
+*.swo
+*.bak
+
+# Session files (if you use them)
+session/*
+*.vim
+
+# Log files
+*.log
+
+# Optional: Node, Python, Rust, or Go package stuff if present
+node_modules/
+__pycache__/
+target/
+bin/
