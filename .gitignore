@@ -3,6 +3,13 @@ lazy/lazy.nvim
 site/pack/*/start/*
 site/pack/*/opt/*
 
+# Ignore plugin folders
+lazy/
+mason/
+site/
+packer_compiled.lua
+
+
 # Mason binaries and packages
 .mason
 
