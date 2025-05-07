@@ -14,6 +14,8 @@ vim.keymap.set("n", "<leader>te", function()
   end, { desc = "File browser at current file path" })  
 
   vim.keymap.set("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Find Projects" }) -- its for project-nvim
+
+  vim.keymap.set('n', '<leader>tf', ":Telescope find_files<CR>", { desc = 'Telescope find files' })
 ---;;;;END OF nvim-telescope keybinds
 
 --- harpoon keybinds

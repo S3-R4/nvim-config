@@ -92,16 +92,8 @@ require("lazy").setup({
     {
         'ahmedkhalf/project.nvim',
         config = function()
-            require('project_nvim').setup {
-                manual_mode = false,  -- Automatically change root directory
-                detection_methods = { 'lsp', 'pattern' },
-                patterns = { '.git', 'Makefile', 'package.json' },
-                show_hidden = true,
-                silent_chdir = true,
-                scope_chdir = 'global',
-              }
-              
-        end
+            require('plugins.fileBrowsing').setup()
+          end
     }
     ---;;;END OF project-nvim      
 

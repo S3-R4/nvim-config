@@ -1467,7 +1467,9 @@ end
 ---@return table result is table of (client_id, client) pairs
 ---@deprecated Use |vim.lsp.get_clients()| instead.
 function lsp.buf_get_clients(bufnr)
-  vim.deprecate('vim.lsp.buf_get_clients()', 'vim.lsp.get_clients()', '0.12')
+  --I commented the line below out since it was giving alert / warning everytime i opened Neovim. The alert was caused by projects-nvim.
+  --    when there is an update where this is fixed the comment can be uncommented
+  --vim.deprecate('vim.lsp.buf_get_clients()', 'vim.lsp.get_clients()', '0.12')
   local result = {} --- @type table<integer,vim.lsp.Client>
   for _, client in ipairs(lsp.get_clients({ bufnr = vim._resolve_bufnr(bufnr) })) do
     result[client.id] = client

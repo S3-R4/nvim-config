@@ -511,7 +511,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/forcedotcom/salesforcedx-vscode@v63.11.0",
+      "id": "pkg:github/forcedotcom/salesforcedx-vscode@v63.12.0",
       "asset": {
         "file": "salesforcedx-vscode-apex-{{ version | strip_prefix \"v\" }}.vsix"
       }
@@ -3907,7 +3907,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/editorconfig-checker/editorconfig-checker@v3.2.1",
+      "id": "pkg:github/editorconfig-checker/editorconfig-checker@v3.3.0",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -6053,7 +6053,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:github/google/google-java-format@v1.26.0",
+      "id": "pkg:github/google/google-java-format@v1.27.0",
       "asset": {
         "file": "google-java-format-{{ version | strip_prefix \"v\" }}-all-deps.jar"
       }
@@ -9869,7 +9869,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:pypi/oelint-adv@7.2.6"
+      "id": "pkg:pypi/oelint-adv@7.2.7"
     },
     "bin": {
       "oelint-adv": "pypi:oelint-adv"
@@ -12175,7 +12175,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/ruby-lsp@0.23.16",
+      "id": "pkg:gem/ruby-lsp@0.23.17",
       "extra_packages": [
         "ruby-lsp-rails"
       ]
@@ -12607,7 +12607,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:pypi/semgrep@1.120.1",
+      "id": "pkg:pypi/semgrep@1.121.0",
       "supported_platforms": [
         "unix"
       ]
@@ -12918,7 +12918,7 @@
       "Compiler"
     ],
     "source": {
-      "id": "pkg:github/shader-slang/slang@v2025.7.1",
+      "id": "pkg:github/shader-slang/slang@v2025.8",
       "asset": [
         {
           "target": "linux_x64_gnu",
@@ -13525,7 +13525,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/sorbet@0.5.12067",
+      "id": "pkg:gem/sorbet@0.5.12070",
       "supported_platforms": [
         "unix"
       ]
@@ -15342,7 +15342,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/aquasecurity/trivy@v0.62.0",
+      "id": "pkg:github/aquasecurity/trivy@v0.62.1",
       "asset": [
         {
           "target": "darwin_x64",
@@ -16226,7 +16226,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:github/chipsalliance/verible@v0.0-3977-gf379fafd",
+      "id": "pkg:github/chipsalliance/verible@v0.0-3979-g786edf03",
       "asset": [
         {
           "target": "linux_x64",
@@ -16463,7 +16463,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/forcedotcom/salesforcedx-vscode@v63.11.0",
+      "id": "pkg:github/forcedotcom/salesforcedx-vscode@v63.12.0",
       "asset": {
         "file": "salesforcedx-vscode-visualforce-{{ version | strip_prefix \"v\" }}.vsix"
       }

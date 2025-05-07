@@ -16,19 +16,6 @@ vim.g.andromeda_transparent = true
 -- Load colorscheme
 vim.cmd("colorscheme andromeda")
 
-vim.opt.fillchars:append { vert = ' ', horiz = ' ', eob = ' ' }
-
-
--- -- Remove window separators
--- vim.opt.fillchars:append {
---     vert = ' ',
---     horiz = ' ',
---     eob = ' ',
---     fold = ' ',
---     diff = ' ',
--- }
-  
-
 -- Lualine setup
 require("lualine").setup({
     options = {
