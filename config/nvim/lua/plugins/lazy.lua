@@ -88,14 +88,36 @@ require("lazy").setup({
     },
     ---;;;END OF harpoon 
 
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        config = true,
+    },
+      
+
     --- project-nvim
     {
         'ahmedkhalf/project.nvim',
         config = function()
             require('plugins.fileBrowsing').setup()
           end
-    }
-    ---;;;END OF project-nvim      
-
+    },
+    ---;;;END OF project-nvim     
+        -- Completion engine + sources
+    { 'hrsh7th/nvim-cmp', 
+        dependencies = {
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-nvim-lua',
+            'L3MON4D3/LuaSnip',
+            'saadparwaiz1/cmp_luasnip',
+        }
+    },
+    -- LSP
+    { 'neovim/nvim-lspconfig' },
+    -- (Optional) prettier UI for LSP actions
+    { 'nvimdev/lspsaga.nvim', config = true, event = 'LspAttach' },
 })
 ---;;;END OF Lazy Setup

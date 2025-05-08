@@ -1,11 +1,3 @@
---- Configuring the dashboard-nvim
-local M = {}
-
--- Define custom highlight group for the dashboard header
-local function set_dashboard_colors()
-    -- Convert RGB values to hex: R(116) G(37) B(45) -> #742D2D
-    vim.api.nvim_command('highlight DashboardHeader guifg=#742D2D ctermfg=131')
-end
 
 -- Set Andromeda-specific settings before loading the colorscheme
 vim.g.andromeda_enable_italic = true
@@ -56,6 +48,16 @@ require("lualine").setup({
       },
 })
 
+
+--- Configuring the dashboard-nvim
+local M = {}
+
+-- Define custom highlight group for the dashboard header
+local function set_dashboard_colors()
+    -- Convert RGB values to hex: R(116) G(37) B(45) -> #742D2D
+    vim.api.nvim_command('highlight DashboardHeader guifg=#742D2D ctermfg=131')
+end
+
 function M.setup_dashboard()
     -- Set up color highlights
     set_dashboard_colors()
@@ -81,6 +83,12 @@ function M.setup_dashboard()
                 "                                ?@@?::.....:::^.           :!Y#@B?.                                 ",
                 "                                 7G############~       ^YPB##P?^                                    ",
                 "                                    .:::::::::.        .?7~:                                        ",
+                "                                                                                                    ",
+                "                                                                                                    ",
+                "                                                                                                    ",
+                "                                                                                                    ",
+                "                                                                                                    ",
+                "                                                                                                    ",
                 "                                                                                                    ",
                 "",
             },
@@ -133,6 +141,7 @@ function M.setup_dashboard()
             win_config = {
                 border = 'none', -- ← This removes the border
             },
+            vertical_center = true,
         },
           
         

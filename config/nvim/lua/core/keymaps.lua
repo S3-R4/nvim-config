@@ -13,15 +13,21 @@ vim.keymap.set("n", "<leader>te", function()
     })
   end, { desc = "File browser at current file path" })  
 
-  vim.keymap.set("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Find Projects" }) -- its for project-nvim
 
+  vim.keymap.set("n", "<leader>tp", ":Telescope projects<CR>", { desc = "Find Projects" }) -- its for project-nvim
   vim.keymap.set('n', '<leader>tf', ":Telescope find_files<CR>", { desc = 'Telescope find files' })
+  vim.keymap.set("n", "<leader>tb", ":Telescope buffers<CR>")
+
 ---;;;;END OF nvim-telescope keybinds
 
 --- harpoon keybinds
 vim.keymap.set("n", "<leader>ha", function() require("harpoon.mark").add_file() end)
 vim.keymap.set("n", "<leader>h1", function() require("harpoon.ui").nav_file(1) end)
 vim.keymap.set("n", "<leader>h2", function() require("harpoon.ui").nav_file(2) end)
+
+for i = 1, 9 do
+    vim.keymap.set("n", "<leader>" .. i, "<cmd>BufferLineGoToBuffer " .. i .. "<CR>")
+  end
 
 vim.keymap.set("n", "<leader>hm", ":Telescope harpoon marks<CR>", { desc = "Telescope Harpoon Marks" })
 ---;;;END OF harpoon keybinds

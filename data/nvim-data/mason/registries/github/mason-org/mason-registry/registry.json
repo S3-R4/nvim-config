@@ -288,6 +288,9 @@
     },
     "bin": {
       "air": "{{source.asset.bin}}"
+    },
+    "neovim": {
+      "lspconfig": "air"
     }
   },
   {
@@ -1059,6 +1062,9 @@
     },
     "bin": {
       "bazelrc-lsp": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "bazelrc_lsp"
     }
   },
   {
@@ -1724,7 +1730,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:pypi/cfn-lint@1.34.2"
+      "id": "pkg:pypi/cfn-lint@1.35.0"
     },
     "bin": {
       "cfn-lint": "pypi:cfn-lint"
@@ -1925,7 +1931,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:pypi/clang-format@20.1.3"
+      "id": "pkg:pypi/clang-format@20.1.4"
     },
     "bin": {
       "clang-format": "pypi:clang-format",
@@ -1995,7 +2001,7 @@
       "Runtime"
     ],
     "source": {
-      "id": "pkg:github/hirosystems/clarinet@v2.16.0",
+      "id": "pkg:github/hirosystems/clarinet@v3.0.1",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -2555,7 +2561,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:npm/%40commitlint/cli@19.8.0",
+      "id": "pkg:npm/%40commitlint/cli@19.8.1",
       "extra_packages": [
         "@commitlint/config-conventional",
         "commitlint-format-json"
@@ -2627,7 +2633,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40github/copilot-language-server@1.314.0"
+      "id": "pkg:npm/%40github/copilot-language-server@1.316.0"
     },
     "bin": {
       "copilot-language-server": "npm:copilot-language-server"
@@ -2956,7 +2962,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:npm/cspell@9.0.0"
+      "id": "pkg:npm/cspell@9.0.1"
     },
     "bin": {
       "cspell": "npm:cspell"
@@ -3258,7 +3264,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/CQLabs/homebrew-dcm@1.28.1",
+      "id": "pkg:github/CQLabs/homebrew-dcm@1.28.2",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -3565,7 +3571,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:pypi/docformatter@1.7.5"
+      "id": "pkg:pypi/docformatter@1.7.6"
     },
     "bin": {
       "docformatter": "pypi:docformatter"
@@ -3651,7 +3657,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/dot-language-server@1.2.3"
+      "id": "pkg:npm/dot-language-server@1.2.4"
     },
     "bin": {
       "dot-language-server": "npm:dot-language-server"
@@ -5138,6 +5144,9 @@
     },
     "bin": {
       "gh-actions-language-server": "npm:gh-actions-language-server"
+    },
+    "neovim": {
+      "lspconfig": "gh_actions_ls"
     }
   },
   {
@@ -7448,7 +7457,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:golang/github.com/google/go-jsonnet@v0.20.0#cmd/jsonnetfmt"
+      "id": "pkg:golang/github.com/google/go-jsonnet@v0.21.0#cmd/jsonnetfmt"
     },
     "bin": {
       "jsonnetfmt": "golang:jsonnetfmt"
@@ -9305,6 +9314,9 @@
     },
     "bin": {
       "nextflow-language-server": "java-jar:language-server-all.jar"
+    },
+    "neovim": {
+      "lspconfig": "nextflow_ls"
     }
   },
   {
@@ -9869,7 +9881,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:pypi/oelint-adv@7.2.7"
+      "id": "pkg:pypi/oelint-adv@8.0.0"
     },
     "bin": {
       "oelint-adv": "pypi:oelint-adv"
@@ -9999,27 +10011,33 @@
       "asset": [
         {
           "target": "darwin_x64",
-          "file": "omnisharp-osx-x64-net6.0.zip:libexec/"
+          "file": "omnisharp-osx-x64-net6.0.zip",
+          "bin": "OmniSharp"
         },
         {
           "target": "darwin_arm64",
-          "file": "omnisharp-osx-arm64-net6.0.zip:libexec/"
+          "file": "omnisharp-osx-arm64-net6.0.zip",
+          "bin": "OmniSharp"
         },
         {
           "target": "linux_x64",
-          "file": "omnisharp-linux-x64-net6.0.zip:libexec/"
+          "file": "omnisharp-linux-x64-net6.0.zip",
+          "bin": "OmniSharp"
         },
         {
           "target": "linux_arm64",
-          "file": "omnisharp-linux-arm64-net6.0.zip:libexec/"
+          "file": "omnisharp-linux-arm64-net6.0.zip",
+          "bin": "OmniSharp"
         },
         {
           "target": "win_x64",
-          "file": "omnisharp-win-x64-net6.0.zip:libexec/"
+          "file": "omnisharp-win-x64-net6.0.zip",
+          "bin": "OmniSharp.exe"
         },
         {
           "target": "win_arm64",
-          "file": "omnisharp-win-arm64-net6.0.zip:libexec/"
+          "file": "omnisharp-win-arm64-net6.0.zip",
+          "bin": "OmniSharp.exe"
         }
       ]
     },
@@ -10027,7 +10045,7 @@
       "lsp": "vscode:https://raw.githubusercontent.com/OmniSharp/omnisharp-vscode/master/package.json"
     },
     "bin": {
-      "omnisharp": "dotnet:libexec/OmniSharp.dll"
+      "OmniSharp": "{{source.asset.bin}}"
     },
     "neovim": {
       "lspconfig": "omnisharp"
@@ -10265,6 +10283,9 @@
     "bin": {
       "oxlint": "npm:oxlint",
       "oxc_language_server": "npm:oxc_language_server"
+    },
+    "neovim": {
+      "lspconfig": "oxlint"
     }
   },
   {
@@ -10596,7 +10617,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:composer/laravel/pint@v1.22.0"
+      "id": "pkg:composer/laravel/pint@v1.22.1"
     },
     "bin": {
       "pint": "composer:pint"
@@ -10702,6 +10723,9 @@
     },
     "bin": {
       "postgrestools": "{{source.asset.file}}"
+    },
+    "neovim": {
+      "lspconfig": "postgres_lsp"
     }
   },
   {
@@ -11091,6 +11115,9 @@
     },
     "bin": {
       "protols": "cargo:protols"
+    },
+    "neovim": {
+      "lspconfig": "protols"
     }
   },
   {
@@ -12801,7 +12828,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:npm/%40shopify/cli@3.79.0"
+      "id": "pkg:npm/%40shopify/cli@3.79.1"
     },
     "bin": {
       "shopify": "npm:shopify"
@@ -12965,6 +12992,9 @@
     "bin": {
       "slangd": "{{source.asset.bin.slangd}}",
       "slangc": "{{source.asset.bin.slangc}}"
+    },
+    "neovim": {
+      "lspconfig": "slangd"
     }
   },
   {
@@ -13411,7 +13441,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:github/ethereum/solidity@v0.8.29",
+      "id": "pkg:github/ethereum/solidity@v0.8.30",
       "asset": [
         {
           "target": [
@@ -13525,7 +13555,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/sorbet@0.5.12070",
+      "id": "pkg:gem/sorbet@0.5.12079",
       "supported_platforms": [
         "unix"
       ]
@@ -14422,6 +14452,9 @@
     },
     "bin": {
       "systemd-language-server": "pypi:systemd-language-server"
+    },
+    "neovim": {
+      "lspconfig": "systemd_ls"
     }
   },
   {
@@ -15513,10 +15546,10 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40typespec/compiler@0.67.2"
+      "id": "pkg:npm/%40typespec/compiler@1.0.0"
     },
     "schemas": {
-      "lsp": "vscode:https://raw.githubusercontent.com/microsoft/typespec/%40typespec%2Fcompiler%40{{version}}/packages/typespec-vscode/package.json"
+      "lsp": "vscode:https://raw.githubusercontent.com/microsoft/typespec/typespec-stable%40{{version}}/packages/typespec-vscode/package.json"
     },
     "bin": {
       "tsp-server": "npm:tsp-server"
@@ -15890,7 +15923,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:github/Enter-tainer/typstyle@v0.13.4",
+      "id": "pkg:github/Enter-tainer/typstyle@v0.13.5",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -16226,7 +16259,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:github/chipsalliance/verible@v0.0-3979-g786edf03",
+      "id": "pkg:github/chipsalliance/verible@v0.0-3984-g905e34cd",
       "asset": [
         {
           "target": "linux_x64",
