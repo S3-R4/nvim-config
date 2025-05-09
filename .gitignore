@@ -37,3 +37,4 @@ node_modules/
 __pycache__/
 target/
 bin/
+data/nvim-data/tree-sitter-go
