@@ -15,6 +15,7 @@ Neovim/undo/*
 Neovim/backup/*
 Neovim/swap/*
 Neovim/cache/*
+Neovim/data/*
 
 # Mason binaries and packages
 .mason

@@ -10275,7 +10275,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:npm/oxlint@0.16.9"
+      "id": "pkg:npm/oxlint@0.16.10"
     },
     "schemas": {
       "lsp": "vscode:https://raw.githubusercontent.com/oxc-project/oxc/oxlint_v{{version}}/editors/vscode/package.json"
@@ -10984,7 +10984,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/yoheimuta/protolint@v0.54.1",
+      "id": "pkg:github/yoheimuta/protolint@v0.55.1",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -13555,7 +13555,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/sorbet@0.5.12079",
+      "id": "pkg:gem/sorbet@0.5.12083",
       "supported_platforms": [
         "unix"
       ]
@@ -17132,7 +17132,7 @@
     ],
     "categories": [],
     "source": {
-      "id": "pkg:github/mikefarah/yq@v4.45.2",
+      "id": "pkg:github/mikefarah/yq@v4.45.3",
       "asset": [
         {
           "target": "darwin_arm64",
