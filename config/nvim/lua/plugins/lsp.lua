@@ -3,23 +3,29 @@ require("mason").setup()
 
 -- Setup Mason LSPConfig to install servers
 require("mason-lspconfig").setup({
-    ensure_installed = { "pyright", "ts_ls", "lua_ls", "rust_analyzer", "gopls"}, -- updated to typescript-language-server
-    automatic_installation = false,  -- automatically install the LSP servers
+    ensure_installed = { "pyright", "tsserver", "lua_ls", "rust_analyzer", "gopls"}, -- fixed ts_ls -> tsserver
+    automatic_installation = false,
 })
 
--- Setup LSP servers
+-- Setup LSP servers with nvim-cmp capabilities
 local lspconfig = require("lspconfig")
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
+local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- Example: Pyright (Python)
-lspconfig.pyright.setup({})
+lspconfig.pyright.setup({
+    capabilities = capabilities,
+})
 
--- -- -- -- Example: typescript-language-server (TypeScript/JavaScript)
--- -- -- lspconfig.tsserver.setup({
--- -- --     -- you can configure this LSP more specifically here if needed
--- -- -- })
+-- Example: typescript-language-server (TypeScript/JavaScript)
+lspconfig.tsserver.setup({
+    capabilities = capabilities,
+})
 
 -- Example: Lua (using lua_ls)
 lspconfig.lua_ls.setup({
+    capabilities = capabilities,
     settings = {
         Lua = {
             diagnostics = {
@@ -29,13 +35,33 @@ lspconfig.lua_ls.setup({
     },
 })
 
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local lspconfig = require("lspconfig")
+
+lspconfig.gopls.setup({
+  capabilities = capabilities,
+  settings = {
+    gopls = {
+      usePlaceholders = true,
+      completeUnimported = true,
+      analyses = {
+        unusedparams = true,
+        shadow = true,
+      },
+      staticcheck = true,
+    },
+  },
+})
+
 -- Example: Rust
-lspconfig.rust_analyzer.setup({})
+lspconfig.rust_analyzer.setup({
+    capabilities = capabilities,
+})
 
--- Example: Golang
-lspconfig.gopls.setup({})
+-- Optional: Disable semantic tokens if you want
+vim.lsp.handlers["textDocument/semanticTokens"] = nil
 
-
+-- nvim-cmp setup
 local cmp = require'cmp'
 
 cmp.setup({
@@ -49,12 +75,30 @@ cmp.setup({
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),  -- Accept suggestion
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },  -- For snippets
-    { name = 'buffer' },   -- For words in buffer
-    { name = 'path' },     -- For file paths
+    { name = 'luasnip' },
+    { name = 'buffer' },
+    { name = 'path' },
   })
 })
+
+-- nvim-cmp integration with autopairs
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
+
+require'cmp'.setup {
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'nvim_lsp_signature_help' },  -- <--- add this line
+    { name = 'luasnip' },
+    { name = 'buffer' },
+    { name = 'path' },
+  })
+}
+ 

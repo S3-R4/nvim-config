@@ -13,6 +13,8 @@ cmp-buffer-max-indexed-line-length-type-number	cmp-buffer.md	/### max_indexed_li
 cmp-buffer-performance-on-large-text-files	cmp-buffer.md	/### Performance on large text files
 cmp-buffer-setup	cmp-buffer.md	/## Setup
 cmp-buffer-visible-buffers	cmp-buffer.md	/##### Visible buffers
+cmp-nvim-lsp-signature-help-cmp-nvim-lsp-signature-help	cmp-nvim-lsp-signature-help.md	/# cmp-nvim-lsp-signature-help
+cmp-nvim-lsp-signature-help-setup	cmp-nvim-lsp-signature-help.md	/# Setup
 cmp-nvim-lua-cmp-nvim-lua	cmp-nvim-lua.md	/# cmp-nvim-lua
 cmp-nvim-lua-include-deprecated-boolean-default-false	cmp-nvim-lua.md	/### `include_deprecated` (boolean: default false)
 cmp-nvim-lua-options	cmp-nvim-lua.md	/# Options

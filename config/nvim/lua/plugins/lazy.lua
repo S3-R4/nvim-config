@@ -115,9 +115,34 @@ require("lazy").setup({
             'saadparwaiz1/cmp_luasnip',
         }
     },
+    {
+        "hrsh7th/cmp-nvim-lsp-signature-help",
+    },
+
     -- LSP
     { 'neovim/nvim-lspconfig' },
     -- (Optional) prettier UI for LSP actions
     { 'nvimdev/lspsaga.nvim', config = true, event = 'LspAttach' },
+    ---;;; END OF LSP
+
+    {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+        require("nvim-treesitter.configs").setup({
+        highlight = { enable = true },      -- enable syntax highlighting
+        indent = { enable = true },         -- enable indentation
+        ensure_installed = { "go", "lua", "python", "rust" }, -- add languages you use
+        })
+    end,
+    },
+
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = true, -- or use config = function() require("nvim-autopairs").setup {} end
+    },
+
+    { 'wakatime/vim-wakatime', lazy = false }
 })
 ---;;;END OF Lazy Setup

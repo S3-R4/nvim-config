@@ -1,12 +1,19 @@
 
--- Set Andromeda-specific settings before loading the colorscheme
-vim.g.andromeda_enable_italic = true
-vim.g.andromeda_disable_italic_comment = false
-vim.g.andromeda_cursor = "auto"
-vim.g.andromeda_transparent = true
+-- -- Set Andromeda-specific settings before loading the colorscheme
+-- vim.g.andromeda_enable_italic = true
+-- vim.g.andromeda_disable_italic_comment = false
+-- vim.g.andromeda_cursor = "auto"
+-- vim.g.andromeda_transparent = true
 
--- Load colorscheme
-vim.cmd("colorscheme andromeda")
+-- -- Load colorscheme
+-- -- vim.cmd("colorscheme andromeda")
+
+vim.cmd("syntax enable")
+vim.opt.termguicolors = true
+vim.cmd("colorscheme andromeda-mariana-italic-bordered")
+
+vim.opt.number = true         -- Show absolute line number on the current line
+vim.opt.relativenumber = true -- Show relative numbers on all other lines
 
 -- Lualine setup
 require("lualine").setup({

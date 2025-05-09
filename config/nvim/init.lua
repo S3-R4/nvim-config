@@ -4,7 +4,8 @@ require("core.keymaps")
 
 require("plugins.lazy")
 
-vim.opt.termguicolors = true
 require("bufferline").setup{}
+
+require("nvim-autopairs").setup {}
 
 require("plugins.lsp")
