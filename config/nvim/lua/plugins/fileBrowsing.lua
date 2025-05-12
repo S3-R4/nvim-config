@@ -15,7 +15,8 @@ require("telescope").setup  {
     },
     pickers = {
         find_files = {
-          find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }
+          find_command = { "fd", "--type", "f", "--strip-cwd-prefix" },
+           hidden = true,
         },
       },
       
@@ -24,6 +25,7 @@ require("telescope").setup  {
         theme = "ivy",
         -- disables netrw and use telescope-file-browser in its place
         hijack_netrw = true,
+        hidden = true,
         mappings = {
           ["i"] = {
             -- your custom insert mode mappings

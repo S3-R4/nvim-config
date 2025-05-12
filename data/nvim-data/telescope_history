@@ -21,3 +21,5 @@ traning
 maing
 main.go
 main
+.wezterm.lua
+:q
