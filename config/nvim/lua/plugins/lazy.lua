@@ -94,7 +94,28 @@ require("lazy").setup({
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = true,
     },
-      
+    
+    {
+        'kyazdani42/nvim-tree.lua',
+        requires = 'nvim-tree/nvim-web-devicons',
+        config = function()
+            vim.g.nvim_tree_respect_buf_cwd = 1
+            
+            require("nvim-tree").setup({
+                    update_cwd = true,
+                    respect_buf_cwd = true,
+                    update_focused_file = {
+                    enable = true,
+                    update_cwd = true,
+                },
+                view = {
+                    hide_root_folder = true,
+                    side = "right",
+                    width = 50,
+
+                },})
+            end
+    },
 
     --- project-nvim
     {
@@ -143,6 +164,9 @@ require("lazy").setup({
         config = true, -- or use config = function() require("nvim-autopairs").setup {} end
     },
 
-    { 'wakatime/vim-wakatime', lazy = false }
+    { 'wakatime/vim-wakatime', lazy = false },
+
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    
 })
 ---;;;END OF Lazy Setup

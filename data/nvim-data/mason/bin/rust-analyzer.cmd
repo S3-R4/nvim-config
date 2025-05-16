@@ -7,4 +7,4 @@ EXIT /b
 SETLOCAL
 CALL :find_dp0
 
-endLocal & goto #_undefined_# 2>NUL || title %COMSPEC% & "N:\Neovim\data\nvim-data\mason\packages\rust-analyzer\rust-analyzer.exe" %*
+endLocal & goto #_undefined_# 2>NUL || title %COMSPEC% & "%dp0%\..\packages\rust-analyzer\rust-analyzer.exe" %*

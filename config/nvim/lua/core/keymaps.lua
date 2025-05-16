@@ -3,7 +3,7 @@ vim.g.mapleader = " " -- space is the leader key. its like Super or Win button b
 vim.g.maplocalleader = " "
 
 -- nvim-telescope keybinds
-vim.keymap.set("n", "<leader>te", function()
+vim.keymap.set("n", "<leader>tb", function()
     require("telescope").extensions.file_browser.file_browser({
       path = vim.fn.expand("%:p:h"), -- start at current buffer’s folder
       select_buffer = true,
@@ -17,7 +17,9 @@ vim.keymap.set("n", "<leader>te", function()
   vim.keymap.set("n", "<leader>tp", ":Telescope projects<CR>", { desc = "Find Projects" }) -- its for project-nvim
   vim.keymap.set('n', '<leader>tf', ":Telescope find_files<CR>", { desc = 'Telescope find files' })
   vim.keymap.set("n", "<leader>tb", ":Telescope buffers<CR>")
-  vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>")
+  -- vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>")
+  vim.keymap.set('n', '<leader>ntt', ':cd %:p:h<CR>:NvimTreeToggle<CR>', { noremap = true, silent = true })
+  vim.keymap.set('n', '<leader>ntf', ':NvimTreeFocus<CR>', { noremap = true, silent = true })
 ---;;;;END OF nvim-telescope keybinds
 
 --- harpoon keybinds

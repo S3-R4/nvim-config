@@ -3,7 +3,7 @@ require("mason").setup()
 
 -- Setup Mason LSPConfig to install servers
 require("mason-lspconfig").setup({
-    ensure_installed = { "pyright", "ts_ls", "lua_ls", "rust_analyzer", --[["gopls"]]},
+    ensure_installed = { "pyright", --[["ts_ls",]] "lua_ls", "rust_analyzer", --[["gopls"]]},
     automatic_installation = false,
 })
 
@@ -15,11 +15,6 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- Example: Pyright (Python)
 lspconfig.pyright.setup({
-    capabilities = capabilities,
-})
-
--- Example: typescript-language-server (TypeScript/JavaScript)
-lspconfig.tsserver.setup({
     capabilities = capabilities,
 })
 
