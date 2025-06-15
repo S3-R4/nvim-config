@@ -33,3 +33,70 @@ for i = 1, 9 do
 
 vim.keymap.set("n", "<leader>hm", ":Telescope harpoon marks<CR>", { desc = "Telescope Harpoon Marks" })
 ---;;;END OF harpoon keybinds
+
+--- DIAGNOSTICS
+-- Show diagnostics in a floating window under cursor
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = "Show diagnostics in float" })
+
+-- Go to next/previous diagnostic
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+
+-- Open diagnostics in location list
+-- dl (diagnostics list)
+vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = "Open diagnostics in location list" })
+
+-- Toggle virtual lines for diagnostics (Neovim 0.10+)
+vim.keymap.set('n', '<leader>dt', function() -- dt (diagnostigs toggle)
+  local new_config = not vim.diagnostic.config().virtual_lines
+  vim.diagnostic.config({ virtual_lines = new_config })
+end, { desc = "Toggle diagnostic virtual lines" })
+
+vim.keymap.set('n', '<leader>Q', function()
+  vim.diagnostic.setqflist({ open = true })
+end, { desc = "Open diagnostics in quickfix list" })
+---;;; END OF DIAGNOSTICS
+
+vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
+vim.keymap.set('n', '<leader>gt', vim.lsp.buf.type_definition, { desc = 'Go to type definition' })
+
+
+
+local job_id = 0
+vim.keymap.set('n', "<leader>st", function()
+    vim.cmd.vnew()
+    vim.cmd.term()
+    vim.cmd.wincmd("J") -- open horizontally split
+
+    vim.api.nvim_win_set_buf(0, 0)
+
+    vim.api.nvim_win_set_height(0, 15)
+
+    job_id = vim.bo.channel
+
+    vim.fn.chansend(job_id, {"cls\r\n"})
+end )
+
+
+-- Bufferline: Move buffer left/right by count (default 1)
+local function move_buffer(direction, count)
+  count = count or 1
+  for _ = 1, count do
+    if direction == "left" then
+      vim.cmd("BufferLineMovePrev")
+    elseif direction == "right" then
+      vim.cmd("BufferLineMoveNext")
+    end
+  end
+end
+
+vim.keymap.set("n", "<leader>hh", function()
+  local count = vim.v.count
+  move_buffer("left", count == 0 and 1 or count)
+end, { silent = true, desc = "Move buffer left by count" })
+
+vim.keymap.set("n", "<leader>ll", function()
+  local count = vim.v.count
+  move_buffer("right", count == 0 and 1 or count)
+end, { silent = true, desc = "Move buffer right by count" })
+

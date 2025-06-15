@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='C:/Users/ahmet/Documents/Documents/Programming/blogProject/backend'
+let g:netrw_dirhist_6='C:\Users\ahmet\Documents\Documents\Programming\blogProject\backend'
 let g:netrw_dirhist_5='C:\Users\ahmet'
 let g:netrw_dirhist_4='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR/cmd/trainer'
 let g:netrw_dirhist_3='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR/cmd'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_1='C:/Users/ahmet/Documents/Documents/Programming/Go'
 let g:netrw_dirhist_0='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR/cmd/trainer'
 let g:netrw_dirhist_9='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR/cmd'
 let g:netrw_dirhist_8='C:/Users/ahmet/Documents/Documents/Programming/Go/OCR'
-let g:netrw_dirhist_7='C:/Users/ahmet/Documents/Documents/Programming/Go'
-let g:netrw_dirhist_6='C:/Users/ahmet/Documents/Documents/Programming/Go/S3R4v2NewSuspended'

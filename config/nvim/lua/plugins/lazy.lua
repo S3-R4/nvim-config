@@ -92,15 +92,24 @@ require("lazy").setup({
         'akinsho/bufferline.nvim',
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
-        config = true,
+        config = function() 
+            require("bufferline").setup{
+                options = {
+                    numbers = function(opts)
+                        return tostring(opts.ordinal)
+                    end,
+                }
+            }   
+
+        end,
     },
-    
+
     {
         'kyazdani42/nvim-tree.lua',
         requires = 'nvim-tree/nvim-web-devicons',
         config = function()
             vim.g.nvim_tree_respect_buf_cwd = 1
-            
+
             require("nvim-tree").setup({
                     update_cwd = true,
                     respect_buf_cwd = true,
@@ -109,9 +118,8 @@ require("lazy").setup({
                     update_cwd = true,
                 },
                 view = {
-                    hide_root_folder = true,
                     side = "right",
-                    width = 50,
+                    width = 35,
 
                 },})
             end
@@ -126,19 +134,41 @@ require("lazy").setup({
     },
     ---;;;END OF project-nvim     
         -- Completion engine + sources
-    { 'hrsh7th/nvim-cmp', 
-        dependencies = {
-            'hrsh7th/cmp-buffer',
-            'hrsh7th/cmp-path',
-            'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-nvim-lua',
-            'L3MON4D3/LuaSnip',
-            'saadparwaiz1/cmp_luasnip',
-        }
-    },
-    {
-        "hrsh7th/cmp-nvim-lsp-signature-help",
-    },
+{
+  'hrsh7th/nvim-cmp',
+  dependencies = {
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lua',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+  },
+  config = function()
+    local cmp = require('cmp')
+    cmp.setup({
+      snippet = {
+        expand = function(args)
+          require('luasnip').lsp_expand(args.body)
+        end,
+      },
+      mapping = cmp.mapping.preset.insert({
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      }),
+      sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+        { name = 'buffer' },
+        { name = 'path' },
+      }),
+    })
+  end
+},
+
 
     -- LSP
     { 'neovim/nvim-lspconfig' },
@@ -164,9 +194,26 @@ require("lazy").setup({
         config = true, -- or use config = function() require("nvim-autopairs").setup {} end
     },
 
+    {
+        "kylechui/nvim-surround",
+        version = "*", -- Use for stability; omit to use `main` branch for latest features
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({})
+        end,
+    },
+
     { 'wakatime/vim-wakatime', lazy = false },
 
     {'akinsho/toggleterm.nvim', version = "*", config = true},
-    
+
+    {
+        "hedyhli/markdown-toc.nvim",
+        ft = "markdown",  -- Lazy load on markdown filetype
+        cmd = { "Mtoc" }, -- Or, lazy load on "Mtoc" command
+        opts = {
+        -- Your configuration here (optional)
+        },
+    },
 })
 ---;;;END OF Lazy Setup

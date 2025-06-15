@@ -1,7 +1,7 @@
 
 -- -- Set Andromeda-specific settings before loading the colorscheme
 -- vim.g.andromeda_enable_italic = true
--- vim.g.andromeda_disable_italic_comment = false
+-- vim.g.a ndromeda_disable_italic_comment = false
 -- vim.g.andromeda_cursor = "auto"
 -- vim.g.andromeda_transparent = true
 
@@ -13,7 +13,9 @@ vim.opt.termguicolors = true
 vim.cmd("colorscheme andromeda-mariana-italic-bordered")
 
 vim.opt.number = true         -- Show absolute line number on the current line
-vim.opt.relativenumber = true -- Show relative numbers on all other lines
+vim.opt.relativenumber = true -- Show relative numbers on all other linespace
+
+vim.o.signcolumn = "yes" -- its for resolving the shaking linenumber issue in certain files. its normally caused by LSP
 
 -- Lualine setup
 require("lualine").setup({
@@ -150,8 +152,7 @@ function M.setup_dashboard()
             },
             vertical_center = true,
         },
-          
-        
+             
     })
 end
 

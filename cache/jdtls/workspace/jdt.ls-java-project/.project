@@ -16,9 +16,89 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>src/Bruch.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/Rechner/Bruch.java</location>
+		</link>
+		<link>
+			<name>src/Bruchrechner.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/Rechner/Bruchrechner.java</location>
+		</link>
+		<link>
+			<name>src/HdkTest.java</name>
+			<type>1</type>
+			<location>S:/HDK/HdkTest.java</location>
+		</link>
+		<link>
+			<name>src/HdkTest2.java</name>
+			<type>1</type>
+			<location>S:/HDK/HdkTest2.java</location>
+		</link>
+		<link>
+			<name>src/Helm.java</name>
+			<type>1</type>
+			<location>S:/HDK/Helm.java</location>
+		</link>
+		<link>
+			<name>src/Hund.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/Hund.java</location>
+		</link>
+		<link>
+			<name>src/Konto.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/Konto.java</location>
+		</link>
+		<link>
+			<name>src/KontoTest.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/KontoTest.java</location>
+		</link>
+		<link>
+			<name>src/Rechner.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/Rechner/Rechner.java</location>
+		</link>
+		<link>
+			<name>src/RechnerTest.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/Rechner/RechnerTest.java</location>
+		</link>
+		<link>
+			<name>src/Ruestung.java</name>
+			<type>1</type>
+			<location>S:/HDK/Ruestung.java</location>
+		</link>
+		<link>
+			<name>src/Stamm.java</name>
+			<type>1</type>
+			<location>S:/HDK/Stamm.java</location>
+		</link>
+		<link>
+			<name>src/TestHund.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/TestHund.java</location>
+		</link>
+		<link>
+			<name>src/Waffe.java</name>
+			<type>1</type>
+			<location>S:/HDK/Waffe.java</location>
+		</link>
+		<link>
 			<name>src/Zwerg.java</name>
 			<type>1</type>
-			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/Zwerg.java</location>
+			<location>S:/HDK/Zwerg.java</location>
+		</link>
+		<link>
+			<name>src/ZwergTest.java</name>
+			<type>1</type>
+			<location>C:/Users/ahmet/OneDrive/Dokumente/MainVault/Okul/ITMI/Java/OOP/ZwergTest.java</location>
+		</link>
+		<link>
+			<name>src/hdkTest.java HdkTest.java</name>
+			<type>1</type>
+			<location>S:/HDK/hdkTest.java HdkTest.java</location>
 		</link>
 	</linkedResources>
 </projectDescription>

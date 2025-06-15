@@ -1,6 +1,9 @@
-n:/Neovim/data/nvim-data/lazy/telescope.nvim
 n:/Neovim/data/nvim-data/lazy/bufferline.nvim
 c:
-n:/Neovim
+n:/Neovim/data/nvim-data/lazy/telescope.nvim
 c:/Users/ahmet/Documents/Documents/Programming/Go/OCR
+s:
+n:/Neovim
 c:/Users/ahmet
+s:/blogProject
+s:/blogProject/backend
