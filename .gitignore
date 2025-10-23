@@ -1,0 +1,93 @@
+# ============================================# Ignore Lazy.nvim, Mason, or Packer plugin directories
+
+# NEOVIM PORTABLE SETUP - GITIGNORElazy/lazy.nvim
+
+# Only track config files, not binaries or datasite/pack/*/start/*
+
+# ============================================site/pack/*/opt/*
+
+
+
+# Neovim binaries and installation files (DO NOT TRACK)# Ignore plugin folders
+
+bin/lazy/
+
+lib/mason/
+
+share/site/
+
+packer_compiled.lua
+
+# Neovim state, cache, and data directories (AUTO-GENERATED)
+
+state/# Neovim state files
+
+cache/Neovim/state/*
+
+data/Neovim/undo/*
+
+Neovim/backup/*
+
+# Ignore Lazy.nvim, Mason, or Packer plugin directoriesNeovim/swap/*
+
+config/nvim/lazy/Neovim/cache/*
+
+config/nvim/plugin/packer_compiled.luaNeovim/data/*
+
+
+
+# Mason binaries and packages# Mason binaries and packages
+
+.mason.mason
+
+
+
+# Undo, backup, and swap files# Undo, backup, and swap files
+
+*.un~*.un~
+
+*.swp*.swp
+
+*.swo*.swo
+
+*.bak*.bak
+
+
+
+# Session files (if you use them)# Session files (if you use them)
+
+session/session/*
+
+*.vim*.vim
+
+
+
+# Log files# Log files
+
+*.log*.log
+
+
+
+# Optional: Node, Python, Rust, or Go package stuff if present# Optional: Node, Python, Rust, or Go package stuff if present
+
+node_modules/node_modules/
+
+__pycache__/__pycache__/
+
+target/target/
+
+bin/
+
+# Android Studio files (should not be in Neovim config)data/nvim-data/tree-sitter-go
+
+config/.android/
+.android/
+
+# Windows/Linux specific files
+.DS_Store
+Thumbs.db
+*.exe
+*.dll
+
+# Start script (Windows-specific, not portable)
+start.bat
