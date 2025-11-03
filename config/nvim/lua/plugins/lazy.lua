@@ -224,6 +224,25 @@ require("lazy").setup({
         end,
     },
 
+    -- Zen Mode (centered text, distraction-free)
+    {
+        "folke/zen-mode.nvim",
+        cmd = "ZenMode",
+        opts = {
+            window = {
+                width = 0.65,
+                options = {
+                    number = true,         
+                    relativenumber = true, 
+                    cursorline = true,     
+                },
+            },
+        },
+        keys = {
+            { "<leader>z", "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
+        },
+    },
+
     { 'wakatime/vim-wakatime', lazy = false },
 
     {'akinsho/toggleterm.nvim', version = "*", config = true},
