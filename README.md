@@ -30,8 +30,10 @@ A portable, cross-platform Neovim configuration that works on both Windows and L
 ```powershell
 # Clone this config to Neovim's config directory
 git clone https://github.com/SecurityR4t/neovim-config-v2.git $env:LOCALAPPDATA\nvim
-
-# Or if using a portable N: drive setup (current setup):
+```
+OR
+```powershell
+# If using a portable N: drive setup (current setup):
 git clone https://github.com/SecurityR4t/neovim-config-v2.git N:\Neovim
 ```
 
