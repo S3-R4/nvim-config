@@ -203,7 +203,7 @@ require("lazy").setup({
         require("nvim-treesitter.configs").setup({
         highlight = { enable = true },      -- enable syntax highlighting
         indent = { enable = true },         -- enable indentation
-        ensure_installed = { "go", "lua", "python", "rust", "html", "typescript", "javascript", "tsx", "json"}, -- add languages you use
+        -- ensure_installed = { "go", "lua", "python", "rust", "html", "typescript", "javascript", "tsx", "json"}, -- add languages you use
         -- autotag = {enable = true}, -- for html autotags
         })
     end,

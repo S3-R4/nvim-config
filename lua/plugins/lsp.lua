@@ -3,7 +3,7 @@ require("mason").setup()
 
 -- Setup Mason LSPConfig to install servers
 require("mason-lspconfig").setup({
-    ensure_installed = { "pyright", --[["ts_ls",]] "lua_ls", "rust_analyzer", --[["gopls"]]},
+    -- ensure_installed = { "pyright", --[["ts_ls",]] "lua_ls", "rust_analyzer", --[["gopls"]]},
     automatic_installation = false,
 })
 
