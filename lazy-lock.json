@@ -14,7 +14,7 @@
   "cord.nvim": { "branch": "master", "commit": "1aadec47743e6cfe77ae6860a5b4305a465f03be" },
   "dashboard-nvim": { "branch": "master", "commit": "0775e567b6c0be96d01a61795f7b64c1758262f6" },
   "harpoon": { "branch": "master", "commit": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3" },
-  "lazy.nvim": { "branch": "main", "commit": "db067881fff0fd4be8c00e5bde7492e0e1c77a2f" },
+  "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
   "lspsaga.nvim": { "branch": "main", "commit": "8efe00d6aed9db6449969f889170f1a7e43101a1" },
   "lualine.nvim": { "branch": "master", "commit": "3946f0122255bc377d14a59b27b609fb3ab25768" },
   "markdown-toc.nvim": { "branch": "main", "commit": "869af35bce0c27e2006f410fa3f706808db4843d" },
@@ -34,5 +34,6 @@
   "telescope-file-browser.nvim": { "branch": "master", "commit": "3610dc7dc91f06aa98b11dca5cc30dfa98626b7e" },
   "telescope.nvim": { "branch": "master", "commit": "b4da76be54691e854d3e0e02c36b0245f945c2c7" },
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
-  "vim-wakatime": { "branch": "master", "commit": "d7973b157a632d1edeff01818f18d67e584eeaff" }
+  "vim-wakatime": { "branch": "master", "commit": "d7973b157a632d1edeff01818f18d67e584eeaff" },
+  "zen-mode.nvim": { "branch": "main", "commit": "8564ce6d29ec7554eb9df578efa882d33b3c23a7" }
 }

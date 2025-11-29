@@ -3,7 +3,7 @@
 
 -- sets the Path to the custom location in my case its N:/Neovim/.../...
 -- Set the path to where lazy.nvim should live (uses portable XDG override)
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath("data") .. "\\lazy\\lazy.nvim"
 
 --Bootstrap / Install lazy.nvim if it doesn't exist
 if not vim.loop.fs_stat(lazypath) then

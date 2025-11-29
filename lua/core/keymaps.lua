@@ -131,7 +131,7 @@ vim.keymap.set("n", "<leader>ll", function()
 end, { silent = true, desc = "Move buffer right by count" })
 
 
--- TEMP COMMAND FOR VIEWING THE ACTUAL KEYBINDS. SIMPLE LOOKUP TABLE.
-vim.api.nvim_create_user_command("Kbl", function()
-    vim.cmd(':vsplit N:/Neovim/config/nvim/keybindLookupTable.md') -- :vsplit opens the file in vertical split mode.
-end, { desc = "Open a specific file in read-only mode with :kbl" })
+-- -- TEMP COMMAND FOR VIEWING THE ACTUAL KEYBINDS. SIMPLE LOOKUP TABLE.
+-- vim.api.nvim_create_user_command("Kbl", function()
+--     vim.cmd(':vsplit N:/Neovim/config/nvim/keybindLookupTable.md') -- :vsplit opens the file in vertical split mode.
+-- end, { desc = "Open a specific file in read-only mode with :kbl" })

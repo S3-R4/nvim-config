@@ -1,4 +1,3 @@
-require("core.customPaths")
 require("core.options")
 require("core.keymaps")
 
