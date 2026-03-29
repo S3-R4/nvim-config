@@ -3,7 +3,7 @@
 
 -- sets the Path to the custom location in my case its N:/Neovim/.../...
 -- Set the path to where lazy.nvim should live (uses portable XDG override)
-local lazypath = vim.fn.stdpath("data") .. "\\lazy\\lazy.nvim"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 --Bootstrap / Install lazy.nvim if it doesn't exist
 if not vim.loop.fs_stat(lazypath) then
@@ -307,8 +307,46 @@ require("lazy").setup({
             panel = { enabled = true },
         })
         end,
-  },
+    },
+    -- lua/plugins/rose-pine.lua
+    -- {
+    --     "rose-pine/neovim",
+    --     name = "rose-pine-moon",
+    --     config = function()
+    --         vim.cmd("colorscheme rose-pine")
+    --     end
+    -- },
 
+
+--    { "catppuccin/nvim", name = "catppuccin-frappe", priority = 1000 },
+--    { "catppuccin/nvim", name = "catppuccin-macchiato", priority = 1000 },
+
+    -- {
+    --   "catppuccin/nvim",
+    --   name = "catppuccin",
+    --   priority = 1000,
+    --   config = function()
+    --     require("catppuccin").setup({
+    --       flavour = "macchiato",  -- or "latte", "frappe", "macchiato"
+    --     })
+    --     vim.cmd.colorscheme "catppuccin-macchiato"
+    --   end
+    -- },
+
+
+    {
+      "rebelot/kanagawa.nvim",
+      priority = 1000,  -- Load early for colorscheme
+      lazy = false,     -- Load immediately
+      config = function()
+        require("kanagawa").setup({
+            theme = "lotus",
+            --transparent = true,
+            dimInactive = true,
+        })
+        vim.cmd("colorscheme kanagawa-wave")
+      end,
+    },
 
 })
 ---;;;END OF Lazy Setup

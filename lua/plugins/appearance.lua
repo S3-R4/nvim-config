@@ -10,7 +10,7 @@
 
 vim.cmd("syntax enable")
 vim.opt.termguicolors = true
-vim.cmd("colorscheme andromeda-mariana-italic-bordered")
+--vim.cmd("colorscheme andromeda-mariana-italic-bordered")
 
 vim.opt.number = true         -- Show absolute line number on the current line
 vim.opt.relativenumber = true -- Show relative numbers on all other linespace
