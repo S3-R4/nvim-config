@@ -10,10 +10,10 @@ Recorded: 2026-10-10. Implementation requested and built on 2026-10-10. See READ
 - Edit Markdown notes and personal todos, with inline images and math.
 - Write LaTeX/TikZ notes with compilation and PDF preview.
 - Terminal: Ghostty.
-- Font: Iosevka. Configure the terminal font when implementation is authorized; final variant remains to be chosen.
+- Font: JetBrainsMono Nerd Font, applied to Ghostty.
 - Use the same configuration on desktop and laptop. Remote editing should run Neovim, plugins, language servers, and build tools on the desktop to reduce laptop work; remote-ssh.nvim / rnvim is selected as an optional external client. No tmux. Disable it using remote.enabled=false or NVIM_REMOTE_DISABLED=1; local nvim always stays local.
 - No automatic formatting, format-on-save, or automatic import rewriting. Preserve manually written layout. Do not add Conform or formatter integrations. Language-server formatting capabilities need not be used.
-- User will update Neovim; the configuration targets that update and imposes no special VimTeX version restriction. The initially installed/locked revision remains v2.17 until `:Lazy update vimtex` is run after the Neovim update.
+- User updated the packaged /usr/bin/nvim to 0.12.6. VimTeX updated to revision 77df16780a8a4b418c651f3a4300d59bc2dd3603 and recorded in lazy-lock.json. No special VimTeX version restriction.
 - Space remains leader and local leader.
 - REBUILD_REFERENCE.md contains mnemonic/keybinding inspiration. Reuse or change individual mappings intentionally; exact preservation is not required.
 - Harpoon is not used and is excluded.
@@ -78,6 +78,7 @@ lua_ls was not selected. Additional servers require a later decision.
 - Important distinction: Snacks Image renders images/math; it does not replace render-markdown's styling of headings, tables, code blocks, and callouts. Beside now provides a separate rendered document preview; its output depends on the chosen external renderer and is not full Obsidian rendering parity.
 - Ghostty supplies compatible terminal graphics support; rendering still requires the appropriate parsers and external conversion tools. Check installed dependencies during implementation.
 - Full LaTeX/TikZ output uses the TeX compiler and PDF viewer. Inline math rendering is not a substitute for compiling complete documents.
+- Snacks Image supplies an in-editor preview of a compiled PDF through Space lp. A separate PDF viewer is optional for full-document reading and synchronization; it is not automatically launched.
 
 ## External tools selected or required
 
@@ -101,7 +102,7 @@ lua_ls was not selected. Additional servers require a later decision.
 
 ## Machine settings and remaining choices
 
-- Extra task manager remains undecided: Markdown checkboxes alone, Obsidian Tasks, or Dooing. Basic toggling is available without a configured vault.
+- Obsidian Tasks selected and installed; Dooing excluded. Basic toggling remains available outside a vault.
 - Identify SQL database/dialect and select its language server.
 - Choose notes/vault and todo locations.
 - Finalize PDF viewer and confirm the Neovim update.
@@ -115,19 +116,20 @@ Wayfinder, Fugitive + Flog, add-subtract-ex, and Goplexity were explicitly selec
 - rbong/vim-flog: Git history graph; installed together with its dependency tpope/vim-fugitive; both load on demand.
 - DRoma82/add-subtract-ex.nvim: manual booleans/operator/letter changes via Ctrl-A/Ctrl-X. Configured with sign_aware=true to preserve native signed-number behavior.
 - sjclayton/goplexity.nvim: heuristic complexity hints, not verified complexity proofs. Installed, but hints stay off and the plugin stays unloaded until toggled with Space tc. Do not rely on the annotations for correctness.
-- snapwich/obsidian-tasks.nvim: task queries/dashboards across Markdown vault files. Distinct from ordinary Obsidian checkbox toggling and code TODO comments.
-- atiladefreitas/dooing: separate JSON-backed task manager. Compare with the Markdown-vault task workflow before choosing; not a drop-in interface for existing vault tasks.
+- snapwich/obsidian-tasks.nvim: selected for task queries/dashboards across Markdown vault files. Loads for Markdown/commands, with custom mappings and Blink field completion. Natural-language date conversion is disabled.
+- atiladefreitas/dooing: excluded after selecting the Markdown-vault task workflow.
 - nacro90/numb.nvim: line-number previews. User also wants word-based previews; native incremental search and Snacks current-buffer/project search already address that without another plugin.
 - Amansingh-afk/milli.nvim: optional animated dashboard decoration. Compatible with Snacks; evaluate animation/redraw overhead and battery cost rather than assuming it is slow.
 - GNITOAHC/remote-ssh.nvim: currently an external rnvim CLI using SSH and Neovim remote UI, not a Lazy plugin. Selected. Client built from source revision 4c35ad4a4ad9a1d9be68cffe04c3ed76814c26f3. Launcher arguments and disable gates tested; real SSH, reconnection, graphics and remote PDF viewing remain untested until a host is supplied. Automatic config sync is forced off.
 
 ## Implementation checks
 
-- 26 Lazy plugins configured and locked; selected parsers and gopls/clangd/JDT LS/texlab installed.
+- 28 Lazy plugins configured and locked; selected parsers and gopls/clangd/JDT LS/texlab installed.
 - Go definition requests and mapped Snacks jump passed; one Java client initialized.
 - C server attachment and unchanged saves passed; VimTeX compiled a LaTeX/TikZ fixture.
 - Go and Markdown saved without content changes; Obsidian frontmatter rewriting and UI styling disabled.
 - Beside rendered through Glow; three theme families switched successfully.
 - Real terminal startup reached first screen in approximately 20 ms with warm desktop caches; laptop/cold-start performance not measured.
 - Shared defaults: lua/config/settings.lua. Machine overrides: ignored lua/config/local.lua, created with :ConfigLocal. Vault and SQL server can change through per-launch environment overrides; remote hosts can change through launcher arguments.
-- Zathura and Iosevka are missing. Ghostty currently uses JetBrains Mono. terminal/ghostty-font.conf supplies the requested Iosevka setting.
+- Zathura is missing and remains an optional proposed PDF viewer. JetBrainsMono Nerd Font is installed; Ghostty now uses JetBrainsMono Nerd Font; mini.icons supplies file and folder icons in Snacks. terminal/ghostty-font.conf supplies the exact installed Iosevka family name.
+- User prohibits any system upgrade or update solely to install Neovim. No system package upgrades or repository refreshes have been performed by this task.

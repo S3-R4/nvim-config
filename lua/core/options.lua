@@ -8,6 +8,7 @@ opt.signcolumn = "yes"
 opt.cursorline = true
 opt.showmode = false
 opt.laststatus = 3
+opt.cmdheight = 0
 opt.splitbelow = true
 opt.splitright = true
 opt.scrolloff = 5

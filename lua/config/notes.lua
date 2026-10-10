@@ -9,6 +9,13 @@ function M.run(command)
 end
 function M.toggle_checkbox()
   if vim.bo.filetype ~= "markdown" then return end
+  if package.loaded["obsidian-tasks"] then
+    local workspace = require("obsidian-tasks.util.obsidian").workspace_for_path(vim.api.nvim_buf_get_name(0))
+    if workspace then
+      vim.cmd("ObsidianTask toggle")
+      return
+    end
+  end
   if Obsidian and Obsidian.opts and vim.b.obsidian_buffer then
     M.run("toggle_checkbox")
     return

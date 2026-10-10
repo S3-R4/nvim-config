@@ -37,11 +37,11 @@ Lazy installs missing plugins on a fresh machine. `lazy-lock.json` records the t
 - `:InstallParsers` installs the chosen Treesitter parsers asynchronously. Reopen a buffer after installing its parser.
 - `:ConfigHealth` checks external tools. Plugin-specific checks are available with `:checkhealth`.
 - Go requires Go; JDT LS requires Java 21 or newer. C/C++ navigation benefits from a project `compile_commands.json`.
-- VimTeX requires a TeX distribution, `latexmk`, and a PDF viewer. Zathura is the current default. TikZ requires the corresponding TeX packages.
+- VimTeX compilation requires a TeX distribution and `latexmk`. TikZ requires the corresponding TeX packages. A separate PDF viewer is optional for compilation; Zathura is the proposed viewer for full-document navigation and source/PDF synchronization. Its integration stays disabled while Zathura is missing, avoiding compiler warnings. Snacks Image can show PDF previews inside Neovim regardless.
 - Snacks Image uses ImageMagick and a supported terminal, plus parsers and TeX tools for math. Ghostty supports the required graphics protocol. Actual display must be checked in Ghostty; a headless test cannot verify it.
 - Beside uses Glow for live Markdown preview. It renders the document in a separate split; Obsidian manages notes and links. This does not reproduce every Obsidian-specific extension.
 
-The configuration targets your planned Neovim upgrade (at least 0.12.4 for current VimTeX). There is no special VimTeX version restriction. The installed and locked revision is still v2.17 from the initial validation; after upgrading Neovim, run `:Lazy update vimtex` to update it.
+Neovim is now 0.12.6. VimTeX has been updated and its revision recorded in `lazy-lock.json`; there is no special VimTeX version restriction.
 
 The local `bin/rnvim` and `bin/glow` binaries are ignored by Git. Neovim adds this config's `bin` directory to its tool search path. On another machine, install those tools for that machine's architecture. Glow can be built with:
 
@@ -80,7 +80,18 @@ rnvim runs the editor, plugins, and servers remotely and attaches a local Neovim
 
 There is no format-on-save, formatter integration, automatic import cleanup, or Obsidian frontmatter rewriting. Formatting and on-type formatting capabilities are disabled on attached LSP clients. Completion, rename, and code actions can still change text when you explicitly invoke/accept them. Indentation while typing is separate from formatting an existing file.
 
-Notes use ordinary Markdown checkboxes for now; a separate task manager remains undecided. `todo-comments.nvim` searches TODO/FIXME comments in source code. Goplexity is installed but remains unloaded until `:Goplexity` or `Space tc`; hints are off initially and toggled on demand. Its estimates are heuristic.
+Obsidian Tasks manages Markdown tasks and dashboards across a vault. It detects vaults using their `.obsidian/` directory, including vaults opened directly without setting `notes.vault`. Obsidian note commands still use the configured vault. The task plugin loads only for Markdown or an explicit task command; its default mappings are disabled to preserve our search mappings. Blink offers task-field completion in Markdown, and natural-language date conversion is disabled. `todo-comments.nvim` separately searches TODO/FIXME comments in source code. Goplexity is installed but remains unloaded until `:Goplexity` or `Space tc`; hints are off initially and toggled on demand. Its estimates are heuristic.
+
+For a task dashboard, create a Markdown file inside your vault with this block:
+
+````markdown
+```tasks
+not done
+sort by due
+```
+````
+
+Matching tasks appear under the block. Dashboard edits update the original task files; generated rows are excluded when saving the dashboard. Outside a vault, `Space nc` still toggles ordinary Markdown checkboxes.
 
 ## Keymaps
 
@@ -93,7 +104,7 @@ Notes use ordinary Markdown checkboxes for now; a separate task manager remains 
 | `Space tf`, `Space tl` | Find files, search project |
 | `Space ts`, `Space tw` | Search current buffer with preview, search word/selection |
 | `Space tb`, `Space tr`, `Space tp` | Buffers, recent files, projects |
-| `Space ntt`, `Space ntf` | Explorer, reveal current file |
+| `Space ntt`, `Space ntf` | Toggle explorer, focus explorer (opens it if closed) |
 | `gd`, `Space gd` | Definition; one result jumps directly, several open a picker |
 | `Ctrl o`, `Ctrl i`, `Ctrl t` | Back/forward in jump list, back through definition tag stack |
 | `Space gt`, `gr`, `gI` | Type definition, references, implementations |
@@ -109,19 +120,24 @@ Notes use ordinary Markdown checkboxes for now; a separate task manager remains 
 | `Space nv` | Vault file picker |
 | `Space nn`, `Space nd`, `Space nb`, `Space nl` | New/daily note, backlinks, follow link (vault required) |
 | `Space nc` | Toggle a Markdown checkbox, including outside a vault |
+| `Space nD`, `Space nr` | Render task dashboard, refresh vault tasks |
+| `Space ne`, `Space np`, `Space ng`, `Space na` | Task due date, priority, source, new task |
 | `Space mp` | Toggle live Markdown preview split |
 | `Space tt`, `[t`, `]t` | Code TODO picker, previous/next TODO |
 | `Space db` | Database UI |
 | `Space lc`, `Space lv`, `Space le`, `Space ls` | LaTeX compile toggle, PDF view, errors, stop |
+| `Space lp` | Preview the compiled PDF inside Neovim through Snacks Image |
 | `Space st`, terminal `Esc Esc` | Terminal split, leave terminal input mode |
 | `Space z`, `Space us`, `Space ut` | Zen mode, smooth-scroll toggle, theme picker |
 | `Space uc`, `Space ul` | Shared settings, machine settings |
+
+Zen uses a dark translucent backdrop with 15% visibility behind the centered editor. Terminal Neovim cannot blur its underlying text. Outside the active scope, syntax colors retain 82% of their original contrast against the background; scope transitions remain animated. This is implemented in `lua/config/zen.lua` and restored when Zen closes.
 
 Search previews replace the proposed Numb plugin. Surround uses its standard mappings (`ys`, `ds`, `cs`). There is no Harpoon, Which-key, bufferline, or second explorer/picker.
 
 ## Terminal font
 
-Iosevka is a terminal setting. After installing it, use `font-family = "Iosevka"` in Ghostty. `terminal/ghostty-font.conf` contains that setting for inclusion in your terminal configuration.
+Ghostty uses JetBrainsMono Nerd Font, which keeps JetBrains text and permits wider icons than the Nerd Font Mono variant. `terminal/ghostty-font.conf` contains the selected family. Snacks file pickers and the explorer use mini.icons for filetype and folder icons.
 
 ## Validation
 

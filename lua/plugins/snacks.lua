@@ -4,17 +4,73 @@ return {
     "folke/snacks.nvim",
     lazy = false,
     priority = 1000,
+    dependencies = {
+      {
+        "nvim-mini/mini.icons",
+        version = "*",
+        opts = {
+          filetype = {
+            go = { glyph = "", hl = "MiniIconsAzure" },
+            java = { glyph = "", hl = "MiniIconsOrange" },
+          },
+          file = {
+            ["go.mod"] = { glyph = "", hl = "MiniIconsAzure" },
+            ["go.sum"] = { glyph = "", hl = "MiniIconsAzure" },
+          },
+        },
+      },
+    },
     opts = {
       bigfile = { enabled = true },
       quickfile = { enabled = true },
-      picker = { enabled = true, icons = { files = { enabled = false } } },
+      picker = {
+        enabled = true,
+        icons = { files = { enabled = true } },
+        sources = {
+          explorer = { layout = { layout = { position = "right" } } },
+        },
+      },
       explorer = { enabled = true },
+      zen = {
+        toggles = { dim = false, git_signs = false, mini_diff_signs = false },
+        win = { backdrop = { transparent = true, bg = "#000000", blend = 15 } },
+        on_open = function(win) require("config.zen").open(win) end,
+        on_close = function() require("config.zen").close() end,
+      },
       image = { enabled = settings.features.image },
       scroll = { enabled = settings.features.scroll, animate = { duration = { step = 8, total = 120 } } },
       dashboard = {
         enabled = true,
+        width = 90,
+        formats = { header = { "%s", align = "left" } },
         preset = {
-          header = "n e o v i m",
+          header = [[
+
+
+                                                                          @@@@@
+              @@@@@@@@@                                   @@@       @@@@@@@@@@@@@
+                @@@@@@@@@                                  @@@@@@@@@@@@@@@@@@@@@@
+                  @@@@@@@                                   @@@@@@@@@@@@@@@@
+                  @@@@@@
+                  @@@@@@          @@@@@@                                       @@
+                  @@@@@@    @@@@@@@@@@@@@@            @@                @@@@@@@@@@@@
+                  @@@@@@@@@@@@@@@@@@@@@@@@@           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@         @@@@@@@@@@@@@@     @@@@@@@@@            @@@@@@@@@@@@@@@@@@@@  @@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@         @@@@@@@                @@@@@@@@@            @@@@@@@@
+     @@@@@@@@@@@@@@@@@@         @@@@@                                       @@@@@@@
+      @@@@@@@@    @@@@@       @@@@@                                        @@@@@@@
+                  @@@@@      @@@                                          @@@@@@@
+                  @@@@@                                                 @@@@@@@@
+                  @@@@@                                               @@@@@@@@
+                  @@@@@                                              @@@@@@@
+                  @@@@@@        @@@@@@@@@                          @@@@@@@
+                   @@@@@@@@@@@@@@@@@@@@@@@                      @@@@@@@@
+                    @@@@@@@@@@@@@@@@@@@@@                     @@@@@@@
+                        @@@@@@@@                           @@@@@@
+                                                         @@@@
+
+
+]],
           keys = {
             { key = "f", desc = "Files", action = function() Snacks.picker.files() end },
             { key = "g", desc = "Search", action = function() Snacks.picker.grep() end },
@@ -25,7 +81,22 @@ return {
             { key = "q", desc = "Quit", action = ":qa" },
           },
         },
-        sections = { { section = "header", padding = 1 }, { section = "keys", gap = 1, padding = 1 } },
+        sections = {
+          { section = "header", padding = 1 },
+          function(self)
+            local items = {}
+            for _, key in ipairs(self.opts.preset.keys) do
+              local item = vim.deepcopy(key)
+              item.text = {
+                { ("%-12s"):format(item.desc), hl = "desc" },
+                { ("[%s]"):format(item.key), hl = "key" },
+              }
+              item.align = "center"
+              items[#items + 1] = item
+            end
+            return items
+          end,
+        },
       },
     },
     keys = {
@@ -37,7 +108,10 @@ return {
       { "<leader>ts", function() Snacks.picker.lines() end, desc = "Search buffer with preview" },
       { "<leader>tw", function() Snacks.picker.grep_word() end, mode = { "n", "x" }, desc = "Search word or selection" },
       { "<leader>ntt", function() Snacks.explorer() end, desc = "File explorer" },
-      { "<leader>ntf", function() Snacks.explorer.reveal() end, desc = "Reveal file in explorer" },
+      { "<leader>ntf", function()
+        local explorer = Snacks.picker.get({ source = "explorer" })[1]
+        if explorer then explorer:focus("list") else Snacks.explorer() end
+      end, desc = "Focus file explorer" },
       { "<leader>bd", function() Snacks.bufdelete() end, desc = "Close buffer" },
       { "<leader>z", function() Snacks.zen() end, desc = "Zen mode" },
       { "<leader>ut", function() Snacks.picker.colorschemes() end, desc = "Compare themes" },

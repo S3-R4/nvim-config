@@ -17,7 +17,11 @@ return {
         documentation = { auto_show = true, auto_show_delay_ms = 250 },
         accept = { auto_brackets = { enabled = false } },
       },
-      sources = { default = { "lsp", "path", "snippets", "buffer" } },
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+        per_filetype = { markdown = { "lsp", "path", "snippets", "buffer", "obsidian_tasks" } },
+        providers = { obsidian_tasks = { name = "Tasks", module = "obsidian-tasks.cmp.source" } },
+      },
       signature = { enabled = true },
       fuzzy = { implementation = "lua" },
     },
