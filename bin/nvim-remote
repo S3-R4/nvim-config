@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+config_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+if [[ ${NVIM_REMOTE_DISABLED:-0} == 1 ]]; then
+  echo 'Remote editing is disabled by NVIM_REMOTE_DISABLED=1.' >&2
+  exit 1
+fi
+settings_output=$(nvim --clean -l "$config_root/scripts/remote-settings.lua" "$config_root")
+mapfile -t remote_settings <<< "$settings_output"
+if [[ ${remote_settings[0]:-false} != true ]]; then
+  echo 'Remote editing is disabled. Set remote.enabled=true in your config to enable it.' >&2
+  exit 1
+fi
+remote_client="$config_root/bin/rnvim"
+if [[ ! -x $remote_client ]]; then remote_client=$(command -v rnvim || true); fi
+if [[ -z $remote_client ]]; then
+  echo 'rnvim is missing. See README.md for installation.' >&2
+  exit 1
+fi
+# Explicit hosts and session commands take priority over the configured default.
+if [[ $# == 0 || $1 == -* ]]; then
+  if [[ -n ${remote_settings[1]:-} && ${1:-} != --help && ${1:-} != --version ]]; then
+    set -- "${remote_settings[1]}" "$@"
+  fi
+fi
+if [[ ${1:-} == session || ${1:-} == --help || ${1:-} == --version ]]; then
+  exec "$remote_client" "$@"
+fi
+# Config sync uses rsync --delete and copies machine-specific settings, too.
+# Keep the shared config on both machines separately.
+exec "$remote_client" --no-sync-config "$@"

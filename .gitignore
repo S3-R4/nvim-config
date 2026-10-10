@@ -1,0 +1,7 @@
+/lua/config/local.lua
+/bookmarks*.html
+/nvim.log
+/.DS_Store
+/bin/rnvim
+/bin/rnvim-server
+/bin/glow
