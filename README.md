@@ -99,7 +99,8 @@ Matching tasks appear under the block. Dashboard edits update the original task 
 | --- | --- |
 | `Space w`, `Space q` | Save, quit window |
 | `Ctrl h/j/k/l` | Move between windows |
-| `Space hh`, `Space ll` | Previous/next buffer |
+| `Shift H`, `Shift L` (also `Space hh`, `Space ll`) | Previous/next buffer; replaces native screen-top/bottom motions |
+| `Space Space` (also `Space tb`) | Open-file picker |
 | `Space bd` | Close buffer |
 | `Space tf`, `Space tl` | Find files, search project |
 | `Space ts`, `Space tw` | Search current buffer with preview, search word/selection |
@@ -128,12 +129,16 @@ Matching tasks appear under the block. Dashboard edits update the original task 
 | `Space lc`, `Space lv`, `Space le`, `Space ls` | LaTeX compile toggle, PDF view, errors, stop |
 | `Space lp` | Preview the compiled PDF inside Neovim through Snacks Image |
 | `Space st`, terminal `Esc Esc` | Terminal split, leave terminal input mode |
-| `Space z`, `Space us`, `Space ut` | Zen mode, smooth-scroll toggle, theme picker |
+| `Space z`, `Space ut` | Zen mode, theme picker |
 | `Space uc`, `Space ul` | Shared settings, machine settings |
 
 Zen uses a dark translucent backdrop with 15% visibility behind the centered editor. Terminal Neovim cannot blur its underlying text. Outside the active scope, syntax colors retain 82% of their original contrast against the background; scope transitions remain animated. This is implemented in `lua/config/zen.lua` and restored when Zen closes.
 
+Smooth scrolling is enabled by default, without a toggle shortcut. Keyboard scrolling uses Snacks with a 280 ms animation cap. Vertical mouse-wheel events use `lua/config/scroll.lua` with 45 ms per line and a 220 ms cap; terminal buffers and picker lists keep their native mouse behavior. Zen initializes its own scroll state when opened.
+
 Search previews replace the proposed Numb plugin. Surround uses its standard mappings (`ys`, `ds`, `cs`). There is no Harpoon, Which-key, bufferline, or second explorer/picker.
+
+The status bar follows the editor theme, spans all windows, and uses powerline arrows with icons supplied by the existing mini.icons plugin. It shows mode, Git branch and change counts, relative file path, current-file diagnostics, a language icon, line-ending icon, LSP status, date/time, and line/column. Diagnostics update in insert mode and disappear when there are no counts. A top bar lists open files on the left and numbered Neovim layout tabs on the right. Window headers remain disabled.
 
 ## Terminal font
 

@@ -34,11 +34,18 @@ return {
       zen = {
         toggles = { dim = false, git_signs = false, mini_diff_signs = false },
         win = { backdrop = { transparent = true, bg = "#000000", blend = 15 } },
-        on_open = function(win) require("config.zen").open(win) end,
+        on_open = function(win)
+          require("config.zen").open(win)
+          if Snacks.scroll.enabled then Snacks.scroll.check(win.win) end
+        end,
         on_close = function() require("config.zen").close() end,
       },
       image = { enabled = settings.features.image },
-      scroll = { enabled = settings.features.scroll, animate = { duration = { step = 8, total = 120 } } },
+      scroll = {
+        enabled = settings.features.scroll,
+        animate = { duration = { step = 14, total = 280 }, easing = "outQuad" },
+        animate_repeat = { duration = { step = 10, total = 140 } },
+      },
       dashboard = {
         enabled = true,
         width = 90,
@@ -100,9 +107,14 @@ return {
       },
     },
     keys = {
+      { "<ScrollWheelDown>", function() return require("config.scroll").key(1) end,
+        mode = { "n", "i", "x" }, expr = true, desc = "Smooth mouse scroll down" },
+      { "<ScrollWheelUp>", function() return require("config.scroll").key(-1) end,
+        mode = { "n", "i", "x" }, expr = true, desc = "Smooth mouse scroll up" },
       { "<leader>tf", function() Snacks.picker.files() end, desc = "Find files" },
       { "<leader>tl", function() Snacks.picker.grep() end, desc = "Search project" },
       { "<leader>tb", function() Snacks.picker.buffers() end, desc = "Buffers" },
+      { "<leader><Space>", function() Snacks.picker.buffers() end, desc = "Buffers" },
       { "<leader>tp", function() Snacks.picker.projects() end, desc = "Projects" },
       { "<leader>tr", function() Snacks.picker.recent() end, desc = "Recent files" },
       { "<leader>ts", function() Snacks.picker.lines() end, desc = "Search buffer with preview" },
@@ -115,9 +127,6 @@ return {
       { "<leader>bd", function() Snacks.bufdelete() end, desc = "Close buffer" },
       { "<leader>z", function() Snacks.zen() end, desc = "Zen mode" },
       { "<leader>ut", function() Snacks.picker.colorschemes() end, desc = "Compare themes" },
-      { "<leader>us", function()
-        if Snacks.scroll.enabled then Snacks.scroll.disable() else Snacks.scroll.enable() end
-      end, desc = "Toggle smooth scrolling" },
     },
   },
 }

@@ -35,15 +35,52 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
+    dependencies = { "nvim-mini/mini.icons" },
+    config = function(_, opts)
+      require("mini.icons").mock_nvim_web_devicons()
+      require("lualine").setup(opts)
+    end,
     opts = {
-      options = { theme = "auto", icons_enabled = false, globalstatus = true, component_separators = "", section_separators = "" },
+      options = {
+        theme = "auto",
+        icons_enabled = true,
+        globalstatus = true,
+        component_separators = "",
+        section_separators = { left = "", right = "" },
+      },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "branch" },
-        lualine_c = { { "filename", path = 1 }, "diagnostics" },
-        lualine_x = { "filetype" },
-        lualine_y = {},
+        lualine_b = { "branch", { "diff", colored = true } },
+        lualine_c = {
+          { "filename", path = 1 },
+          {
+            "diagnostics",
+            sources = { "nvim_diagnostic" },
+            sections = { "error", "warn", "info", "hint" },
+            update_in_insert = true,
+            always_visible = false,
+            symbols = { error = " ", warn = " ", info = " ", hint = "󰌵 " },
+          },
+        },
+        lualine_x = {
+          { "filetype", icon_only = true },
+          "fileformat",
+          { "lsp_status", show_name = true },
+        },
+        lualine_y = { { "datetime", style = "%Y-%m-%d %H:%M" } },
         lualine_z = { "location" },
+      },
+      tabline = {
+        lualine_a = {
+          {
+            "buffers",
+            mode = 0,
+            show_filename_only = true,
+            hide_filename_extension = false,
+            show_modified_status = true,
+          },
+        },
+        lualine_z = { { "tabs", mode = 2, path = 0, tab_max_length = 40 } },
       },
     },
   },
