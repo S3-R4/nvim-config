@@ -21,7 +21,17 @@ return {
     enabled = settings.features.git_history,
     dependencies = { "tpope/vim-fugitive" },
     cmd = { "Flog", "Flogsplit" },
-    keys = { { "<leader>gl", "<cmd>Flog<cr>", desc = "Git history graph" } },
+    init = function()
+      vim.g.flog_enable_dynamic_commit_hl = true
+      vim.g.flog_default_opts = {
+        all = true,
+        graph = true,
+        default_collapsed = true,
+        format = "%d %<(36,trunc)%s",
+        open_cmd = "botright 52vsplit",
+      }
+    end,
+    keys = { { "<leader>gl", function() require("config.git_graph").toggle() end, desc = "Toggle Git graph sidebar" } },
   },
   {
     "DRoma82/add-subtract-ex.nvim",

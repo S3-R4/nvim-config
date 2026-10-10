@@ -42,7 +42,7 @@ return {
     end,
     opts = {
       options = {
-        theme = "auto",
+        theme = function() return require("config.statusline").theme() end,
         icons_enabled = true,
         globalstatus = true,
         component_separators = "",
@@ -63,8 +63,8 @@ return {
           },
         },
         lualine_x = {
-          { "filetype", icon_only = true },
-          "fileformat",
+          { "filetype", icon_only = true, separator = "|" },
+          { "fileformat", separator = "|" },
           { "lsp_status", show_name = true },
         },
         lualine_y = { { "datetime", style = "%Y-%m-%d %H:%M" } },
@@ -80,7 +80,7 @@ return {
             show_modified_status = true,
           },
         },
-        lualine_z = { { "tabs", mode = 2, path = 0, tab_max_length = 40 } },
+        lualine_z = {},
       },
     },
   },

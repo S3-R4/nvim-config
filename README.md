@@ -138,7 +138,7 @@ Smooth scrolling is enabled by default, without a toggle shortcut. Keyboard scro
 
 Search previews replace the proposed Numb plugin. Surround uses its standard mappings (`ys`, `ds`, `cs`). There is no Harpoon, Which-key, bufferline, or second explorer/picker.
 
-The status bar follows the editor theme, spans all windows, and uses powerline arrows with icons supplied by the existing mini.icons plugin. It shows mode, Git branch and change counts, relative file path, current-file diagnostics, a language icon, line-ending icon, LSP status, date/time, and line/column. Diagnostics update in insert mode and disappear when there are no counts. A top bar lists open files on the left and numbered Neovim layout tabs on the right. Window headers remain disabled.
+The status bar follows the editor theme with darker backgrounds, spans all windows, and uses powerline arrows with icons supplied by the existing mini.icons plugin. It shows mode, Git branch and change counts, relative file path, current-file diagnostics, a language icon, line-ending icon, LSP status, date/time, and line/column. Vertical separators distinguish the language, line-ending, and LSP items. Diagnostics update in insert mode and disappear when there are no counts. A top bar lists open files on the left. Window headers remain disabled.
 
 ## Terminal font
 

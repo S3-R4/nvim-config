@@ -163,11 +163,13 @@ Definition search jumps directly when there is one result and opens a picker for
 | Keys | Action |
 | --- | --- |
 | `Space gg` | Open Git status (Fugitive) |
-| `Space gl` | Open Git history graph (Flog) |
+| `Space gl` | Toggle compact Git graph sidebar on the right (all branches) |
 | `[h` / `]h` | Previous / next changed section |
 | `Space gp` | Preview changed section |
 | `Space gs` | Stage changed section |
 | `Space gb` | Show blame for the current line |
+
+The graph shows branch labels and shortened commit subjects without dates or authors. In the graph, `Enter` opens commit details and `g?` shows Flog's controls. `Space gl` closes the graph again.
 
 ## Notes and Markdown
 
