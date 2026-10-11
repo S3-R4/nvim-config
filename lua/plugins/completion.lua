@@ -15,7 +15,7 @@ return {
       completion = {
         list = { selection = { preselect = false, auto_insert = false } },
         documentation = { auto_show = true, auto_show_delay_ms = 250 },
-        accept = { auto_brackets = { enabled = false } },
+        accept = { auto_brackets = { enabled = true } },
       },
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },

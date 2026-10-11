@@ -9,6 +9,7 @@ Your custom bindings, common plugin controls, and useful native shortcuts.
 | Keys | Action |
 | --- | --- |
 | `Space Space` | List and choose an open file |
+| `Space 1` … `Space 9` | Switch to the numbered file in the top bar |
 | `Shift+H` / `Shift+L` | Previous / next open file |
 | `Space tf` | Fuzzy-find a file |
 | `Space tl` | Search text across the project |
@@ -26,6 +27,7 @@ Your custom bindings, common plugin controls, and useful native shortcuts.
 | Keys | Action |
 | --- | --- |
 | `Space Space` or `Space tb` | Open-file picker |
+| `Space 1` … `Space 9` | Jump directly to an open file by its top-bar index |
 | `Shift+H` or `Space hh` | Previous buffer |
 | `Shift+L` or `Space ll` | Next buffer |
 | `Space bd` | Close buffer |
@@ -44,6 +46,8 @@ Filename matching in `Space tf` is fuzzy: letters can have gaps between them. Pr
 ## Explorer controls
 
 These keys apply **inside the explorer list**, not in the code editor.
+
+Dotfiles (including `.gitignore`) and Git-ignored files are visible by default in the explorer and file picker. Use the hidden/ignored toggles below to hide them temporarily.
 
 | Keys | Action |
 | --- | --- |
@@ -227,6 +231,8 @@ Use these in a TeX document. Compilation requires your TeX tools; external viewi
 | `Ctrl+K` | Show/hide signature help |
 
 Suggestions are not preselected or inserted automatically. These controls are context-specific: `Ctrl+K` focuses the upper window in normal mode but controls signature help in insert mode.
+
+Typed brackets and quotes automatically get closing partners through nvim-autopairs. Blink separately adds brackets when accepting supported function completions. Enter keeps the completion/newline behavior described above.
 
 ## Surround and number editing
 

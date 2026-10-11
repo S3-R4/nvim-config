@@ -27,7 +27,12 @@ return {
         enabled = true,
         icons = { files = { enabled = true } },
         sources = {
-          explorer = { layout = { layout = { position = "right" } } },
+          explorer = {
+            hidden = true,
+            ignored = true,
+            layout = { layout = { position = "right" } },
+          },
+          files = { hidden = true, ignored = true },
         },
       },
       explorer = { enabled = true },

@@ -1,4 +1,9 @@
 return {
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = { map_cr = false }, -- keep Blink's Enter binding and manual newline layout
+  },
   { "kylechui/nvim-surround", event = "VeryLazy", version = "*", opts = {} },
   {
     "lewis6991/gitsigns.nvim",

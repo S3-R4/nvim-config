@@ -27,6 +27,8 @@ Recorded: 2026-10-10. Implementation requested and built on 2026-10-10. See READ
 | harshrajsachan/omni.nvim | Compare against Kanagawa; only one theme active at a time | https://github.com/harshrajsachan/omni.nvim |
 | catppuccin/nvim | Third theme available for comparison | https://github.com/catppuccin/nvim |
 | nvim-lualine/lualine.nvim | Compact statusline | https://github.com/nvim-lualine/lualine.nvim |
+| windwp/nvim-autopairs | Pair manually typed brackets and quotes | https://github.com/windwp/nvim-autopairs |
+| wakatime/vim-wakatime | Coding activity tracking; automatic status bar item disabled | https://github.com/wakatime/vim-wakatime |
 | nvim-treesitter/nvim-treesitter | Parsers, highlighting, folding | https://github.com/nvim-treesitter/nvim-treesitter |
 | lewis6991/gitsigns.nvim | Git changes and hunk operations | https://github.com/lewis6991/gitsigns.nvim |
 | folke/snacks.nvim | Selected modules listed below | https://github.com/folke/snacks.nvim |
@@ -124,6 +126,7 @@ Wayfinder, Fugitive + Flog, add-subtract-ex, and Goplexity were explicitly selec
 
 ## Implementation checks
 
+- Discord presence: Cord, Detailed layout with dynamic filename/project, Atom dark icons, language large/editor small, repository button, elapsed time without resets or sharing, 10-minute idle status (`Idling`, hover `Idle`, no second line), focus resume/smart idle, reconnect enabled. Loads after startup. Activity-specific text matches the Discord questionnaire; no custom application ID or image URLs. Remote IPC setup remains separate.
 - 28 Lazy plugins configured and locked; selected parsers and gopls/clangd/JDT LS/texlab installed.
 - Go definition requests and mapped Snacks jump passed; one Java client initialized.
 - C server attachment and unchanged saves passed; VimTeX compiled a LaTeX/TikZ fixture.

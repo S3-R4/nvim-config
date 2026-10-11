@@ -36,6 +36,21 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     dependencies = { "nvim-mini/mini.icons" },
+    keys = (function()
+      local keys = {}
+      for index = 1, 9 do
+        local position = index
+        keys[#keys + 1] = {
+          "<leader>" .. position,
+          function()
+            require("lualine").tabline()
+            require("lualine.components.buffers").buffer_jump(position, "!")
+          end,
+          desc = "Switch to file " .. position,
+        }
+      end
+      return keys
+    end)(),
     config = function(_, opts)
       require("mini.icons").mock_nvim_web_devicons()
       require("lualine").setup(opts)
@@ -74,7 +89,7 @@ return {
         lualine_a = {
           {
             "buffers",
-            mode = 0,
+            mode = 2,
             show_filename_only = true,
             hide_filename_extension = false,
             show_modified_status = true,

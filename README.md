@@ -101,6 +101,7 @@ Matching tasks appear under the block. Dashboard edits update the original task 
 | `Ctrl h/j/k/l` | Move between windows |
 | `Shift H`, `Shift L` (also `Space hh`, `Space ll`) | Previous/next buffer; replaces native screen-top/bottom motions |
 | `Space Space` (also `Space tb`) | Open-file picker |
+| `Space 1` … `Space 9` | Jump to a numbered file in the top bar |
 | `Space bd` | Close buffer |
 | `Space tf`, `Space tl` | Find files, search project |
 | `Space ts`, `Space tw` | Search current buffer with preview, search word/selection |
@@ -139,6 +140,12 @@ Smooth scrolling is enabled by default, without a toggle shortcut. Keyboard scro
 Search previews replace the proposed Numb plugin. Surround uses its standard mappings (`ys`, `ds`, `cs`). There is no Harpoon, Which-key, bufferline, or second explorer/picker.
 
 The status bar follows the editor theme with darker backgrounds, spans all windows, and uses powerline arrows with icons supplied by the existing mini.icons plugin. It shows mode, Git branch and change counts, relative file path, current-file diagnostics, a language icon, line-ending icon, LSP status, date/time, and line/column. Vertical separators distinguish the language, line-ending, and LSP items. Diagnostics update in insert mode and disappear when there are no counts. A top bar lists open files on the left. Window headers remain disabled.
+
+## Coding activity
+
+Discord Rich Presence uses `vyfor/cord.nvim`, loaded after startup. It shows the current filename and project, Atom dark icons (language large, Neovim small), and a repository button when a remote URL is available. After 10 minutes it shows `Idling` without a project line. It reconnects if Discord opens later. Run `:Cord status` to inspect the connection. Discord desktop must be running with activity sharing enabled; remote Neovim requires separate Discord IPC connectivity. Elapsed time is enabled, though Cord's documentation currently lists Discord timestamp rendering as broken. Appearance settings live in `lua/plugins/tracking.lua`.
+
+WakaTime tracks coding activity through `wakatime/vim-wakatime`. Run `:WakaTimeApiKey` to enter your key locally, and `:WakaTimeToday` to see today's tracked time. Its automatic status bar item is disabled to preserve the chosen layout. The plugin manages its WakaTime CLI automatically.
 
 ## Terminal font
 
