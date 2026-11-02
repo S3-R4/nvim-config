@@ -11,7 +11,7 @@ return {
       "saghen/blink.cmp",
     },
     config = function()
-      local servers = { "gopls", "clangd", "texlab" }
+      local servers = { "gopls", "clangd", "texlab", "harper_ls" }
       if settings.sql.server ~= "" then servers[#servers + 1] = settings.sql.server end
       local capabilities = require("blink.cmp").get_lsp_capabilities()
       vim.lsp.config("*", { capabilities = capabilities })
@@ -29,7 +29,7 @@ return {
       })
       vim.lsp.enable(servers)
       vim.api.nvim_create_user_command("InstallServers", function()
-        local packages = { "gopls", "clangd", "jdtls", "texlab" }
+        local packages = { "gopls", "clangd", "jdtls", "texlab", "harper-ls" }
         if settings.sql.server ~= "" then
           local mapping = require("mason-lspconfig.mappings").get_mason_map().lspconfig_to_package
           packages[#packages + 1] = assert(mapping[settings.sql.server], "Unknown Mason SQL server: " .. settings.sql.server)

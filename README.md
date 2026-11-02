@@ -33,7 +33,7 @@ Environment overrides take priority over saved settings. Database connections ca
 
 Lazy installs missing plugins on a fresh machine. `lazy-lock.json` records the tested revisions. Normal startup does not check for updates, download language servers, or compile parsers.
 
-- `:InstallServers` installs gopls, clangd, JDT LS, texlab, and the selected SQL server through Mason.
+- `:InstallServers` installs gopls, clangd, JDT LS, texlab, Harper, and the selected SQL server through Mason.
 - `:InstallParsers` installs the chosen Treesitter parsers asynchronously. Reopen a buffer after installing its parser.
 - `:ConfigHealth` checks external tools. Plugin-specific checks are available with `:checkhealth`.
 - Go requires Go; JDT LS requires Java 21 or newer. C/C++ navigation benefits from a project `compile_commands.json`.
@@ -77,6 +77,8 @@ The desktop needs Neovim, this shared config, plugins, language servers, and dev
 rnvim runs the editor, plugins, and servers remotely and attaches a local Neovim UI. Its saved sessions remember workspace locations; network-disconnect recovery and graphics behavior have not been tested here. A desktop address was not supplied, so no real connection was attempted. A remote PDF viewer normally opens on the desktop, not the laptop; PDF viewing on the laptop needs a separate file-transfer/viewing workflow.
 
 ## Editing behavior
+
+[Harper](https://writewithharper.com/docs/integrations/neovim) checks English grammar and spelling in supported documents and source-code comments through `harper-ls`. Install it with `:MasonInstall harper-ls` (or `:InstallServers`), then reopen the buffer. Use `Space ca` for suggested corrections and dictionary actions, and the existing diagnostic mappings to inspect findings.
 
 There is no format-on-save, formatter integration, automatic import cleanup, or Obsidian frontmatter rewriting. Formatting and on-type formatting capabilities are disabled on attached LSP clients. Completion, rename, and code actions can still change text when you explicitly invoke/accept them. Indentation while typing is separate from formatting an existing file.
 

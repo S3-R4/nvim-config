@@ -222,15 +222,15 @@ Use these in a TeX document. Compilation requires your TeX tools; external viewi
 | Keys | Action |
 | --- | --- |
 | `Ctrl+Space` | Show completion; show/hide documentation when already open |
-| `Ctrl+N` / `Ctrl+P` or `Down` / `Up` | Next / previous suggestion |
+| `Ctrl+J` / `Ctrl+K` or `Down` / `Up` | Next / previous suggestion |
 | `Enter` | Accept selected suggestion; otherwise normal Enter |
 | `Ctrl+Y` | Select and accept a suggestion |
 | `Ctrl+E` | Cancel completion |
-| `Tab` / `Shift+Tab` | Next / previous snippet field |
+| `Tab` | Accept selected suggestion, or first suggestion if none selected; otherwise indent |
+| `Shift+Tab` | Advance to the next snippet field; otherwise select the next suggestion |
 | `Ctrl+B` / `Ctrl+F` | Scroll documentation up / down |
-| `Ctrl+K` | Show/hide signature help |
 
-Suggestions are not preselected or inserted automatically. These controls are context-specific: `Ctrl+K` focuses the upper window in normal mode but controls signature help in insert mode.
+Suggestions are not preselected or inserted automatically. The completion menu has a rounded border, item-type symbols, and a contrasting scrollbar when more results are available. These controls are context-specific: `Ctrl+K` focuses the upper window in normal mode but selects the previous suggestion in insert mode. Use `Space cs` in normal mode for signature help.
 
 Typed brackets and quotes automatically get closing partners through nvim-autopairs. Blink separately adds brackets when accepting supported function completions. Enter keeps the completion/newline behavior described above.
 
